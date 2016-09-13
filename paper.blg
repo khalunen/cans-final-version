@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/W32TeX)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: paper.aux
+The style file: splncs.bst
+Database file #1: tweetybib.bib
+Warning--empty booktitle in other/tweetcipher
+You've used 23 entries,
+            2785 wiz_defined-function locations,
+            730 strings with 8307 characters,
+and the built_in function-call counts, 13638 in all, are:
+= -- 1147
+> -- 420
+< -- 17
++ -- 175
+- -- 150
+* -- 853
+:= -- 1709
+add.period$ -- 41
+call.type$ -- 23
+change.case$ -- 186
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 1230
+empty$ -- 1268
+format.name$ -- 167
+if$ -- 3008
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 245
+newline$ -- 74
+num.names$ -- 44
+pop$ -- 514
+preamble$ -- 1
+purify$ -- 122
+quote$ -- 0
+skip$ -- 332
+stack$ -- 0
+substring$ -- 772
+swap$ -- 620
+text.length$ -- 17
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 92
+warning$ -- 1
+while$ -- 100
+width$ -- 25
+write$ -- 238
+(There was 1 warning)

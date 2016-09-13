@@ -1,0 +1,12 @@
+\BOOKMARK [0][-]{section*.1}{Tweety: Tweet Secrets Efficiently}{}% 1
+\BOOKMARK [1][-]{section.1}{1 Introduction}{section*.1}% 2
+\BOOKMARK [1][-]{section.2}{2 Model}{section*.1}% 3
+\BOOKMARK [2][-]{subsection.2.1}{2.1 Notation}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{2.2 Tweety}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.3}{2.3 Threat Model}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{3 Tweety: Basic Construction}{section*.1}% 7
+\BOOKMARK [1][-]{section.4}{4 Tweety: Expanded Tweak Space}{section*.1}% 8
+\BOOKMARK [1][-]{section.5}{5 Tweety: Sponge Construction}{section*.1}% 9
+\BOOKMARK [1][-]{section.6}{6 Implementation}{section*.1}% 10
+\BOOKMARK [1][-]{section.7}{7 Related Work}{section*.1}% 11
+\BOOKMARK [1][-]{section.8}{8 Discussion and Conclusions}{section*.1}% 12

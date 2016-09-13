@@ -1,0 +1,945 @@
+@MISC{FLS+11,
+    AUTHOR      = {Niels Ferguson and Stefan Lucks and Bruce Schneier and Doug Whiting and Mihir Bellare and Tadayoshi Kohno and Jon Callas and Jesse Walker},
+    TITLE       = {The {Skein} Hash Function Family},
+    YEAR        = {2010},
+    NOTE        = {Submission to NIST's SHA-3 competition}
+}
+
+@MISC{Cryptopp,
+    KEY         = {Cryptopp},
+    TITLE       = {{Crypto++ 5.6.0 Benchmarks}},
+    MONTH       = {January},
+    YEAR        = {2016}
+}
+
+@MISC{BDPA12,
+    AUTHOR      = {Guido Bertoni and Joan Daemen and Micha\"{e}l Peeters and Gilles {Van Assche}},
+    TITLE       = {Keccak implementation overview},
+    MONTH       = {May},
+    YEAR        = {2012}
+}
+
+@MISC{BDPA11,
+    AUTHOR      = {Guido Bertoni and Joan Daemen and Micha\"{e}l Peeters and Gilles {Van Assche}},
+    TITLE       = {The {Keccak} reference},
+    MONTH       = {January},
+    YEAR        = {2011}
+}
+
+@MISC{BDPA07,
+    AUTHOR      = {Guido Bertoni and Joan Daemen and Micha\"{e}l Peeters and Gilles {Van Assche}},
+    TITLE       = {Sponge Functions},
+    YEAR        = {ECRYPT Hash Function Workshop 2007}
+}
+
+@MISC{BDPA11-SKEW,
+    AUTHOR      = {Guido Bertoni and Joan Daemen and Micha\"{e}l Peeters and Gilles {Van Assche}},
+    TITLE       = {On the Security of the Keyed {Sponge} Construction},
+    HOWPUBLISHED = {Symmetric Key Encryption Workshop (SKEW 2011)},
+    YEAR        = {2011}
+}
+
+@misc{DBLP:journals/iacr/BellareGM04,
+  author    = {Mihir Bellare and
+               Oded Goldreich and
+               Anton Mityagin},
+  title     = {The Power of Verification Queries in Message Authentication and Authenticated
+               Encryption},
+  howpublished={Cryptology ePrint Archive, Report 2004/309},
+  year      = {2004},
+}
+
+@inproceedings{ADMV15-FSE,
+ author    = {Elena Andreeva and Joan Daemen and Bart Mennink and 
+                    Gilles {Van Assche}},
+  title     = {Security of Keyed {Sponge} Constructions Using a Modular Proof Approach},
+  booktitle = {{FSE} 2015},
+  pages     = {364--384},
+  series    = {LNCS},
+  volume    = {9054},
+  publisher = {Springer},
+  year      = {2015},
+}
+
+@inproceedings{DBLP:conf/fse/AndreevaBBLMMY14,
+  author    = {Elena Andreeva and
+               Beg{\"{u}}l Bilgin and
+               Andrey Bogdanov and
+               Atul Luykx and
+               Bart Mennink and
+               Nicky Mouha and
+               Kan Yasuda},
+  title     = {{APE:} Authenticated Permutation-Based Encryption for Lightweight
+               Cryptography},
+  booktitle = {{FSE} 2014},
+  pages     = {168--186},
+  series    = {LNCS},
+  volume    = {8540},
+  publisher = {Springer},
+  year      = {2015},
+}
+
+@inproceedings{BDPA11-SAC,
+  author    = {Guido Bertoni and
+               Joan Daemen and
+               Micha{\"{e}}l Peeters and
+               Gilles {Van Assche}},
+  title     = {Duplexing the {Sponge}: Single-Pass Authenticated Encryption and Other
+               Applications},
+  booktitle = {{SAC} 2011},
+  pages     = {320--337},
+  series    = {LNCS},
+  volume    = {7118},
+  publisher = {Springer},
+  year      = {2012}
+}
+
+@inproceedings{LRW02,
+  author    = {Moses Liskov and
+               Ronald L. Rivest and
+               David Wagner},
+  title     = {Tweakable Block Ciphers},
+  booktitle = {{CRYPTO} 2002},
+  pages     = {31--46},
+  series    = {LNCS},
+  volume    = {2442},
+  publisher = {Springer},
+  year      = {2002}
+}
+
+@inproceedings{BDJR97,
+  author    = {Mihir Bellare and
+               Anand Desai and
+               E. Jokipii and
+               Phillip Rogaway},
+  title     = {A Concrete Security Treatment of Symmetric Encryption},
+  booktitle = {{FOCS} 1997},
+  pages     = {394--403},
+  publisher = {{IEEE} Computer Society},
+  year      = {1997}
+}
+
+
+
+@inproceedings{DBLP:conf/isw/BiryukovK14,
+  author    = {Alex Biryukov and
+               Dmitry Khovratovich},
+  title     = {{PAEQ:} Parallelizable Permutation-Based Authenticated Encryption},
+  booktitle = {{ISC} 2014},
+  pages     = {72--89},
+  series    = {LNCS},
+  volume    = {8783},
+  publisher = {Springer},
+  year      = {2014},
+}
+
+
+
+
+
+
+
+@inproceedings{cse/LuoXH09,
+  author    = {Wanying Luo and
+               Qi Xie and
+               Urs Hengartner},
+  title     = {{FaceCloak}: An Architecture for User Privacy on Social Networking Sites},
+  booktitle = {{IEEE} {CSE} 2009},
+  pages     = {26--33},
+  year      = {2009},
+  publisher = {{IEEE} Computer Society},
+}
+
+
+
+
+@inproceedings{pet/BeatoKW11,
+  author    = {Filipe Beato and
+               Markulf Kohlweiss and
+               Karel Wouters},
+  title     = {Scramble! Your Social Network Data},
+  booktitle = {{PETS} 2011},
+  pages     = {211--225},
+  year      = {2011},
+  series    = {LNCS},
+  volume    = {6794},
+  publisher = {Springer},
+}
+
+
+
+
+@inproceedings{codaspy/BeatoICPL13,
+  author    = {Filipe Beato and
+               Iulia Ion and
+               Srdjan {\v C}apkun and
+               Bart Preneel and
+               Marc Langheinrich},
+  title     = {For some eyes only: protecting online information sharing},
+  booktitle = {{ACM} {CODASPY} 2013},
+  pages     = {1--12},
+  year      = {2013},
+  publisher = {{ACM}},
+}
+
+
+
+
+@inproceedings{sigcomm/BadenBSBS09,
+  author    = {Randolph Baden and
+               Adam Bender and
+               Neil Spring and
+               Bobby Bhattacharjee and
+               Daniel Starin},
+  title     = {Persona: an online social network with user-defined privacy},
+  booktitle = {{ACM} {SIGCOMM} 2009},
+  pages     = {135--146},
+  year      = {2009},
+  publisher = {{ACM}},
+}
+
+
+
+@inproceedings{asiaccs/JahidMB11,
+  author    = {Sonia Jahid and
+               Prateek Mittal and
+               Nikita Borisov},
+  title     = {{EASiER}: encryption-based access control in social networks with efficient
+               revocation},
+  booktitle = {{ACM} {ASIACCS} 2011},
+  pages     = {411--415},
+  year      = {2011},
+  publisher = {{ACM}},
+}
+
+
+
+
+@inproceedings{sp/CristofaroSTW12,
+  author    = {Emiliano De Cristofaro and
+               Claudio Soriente and
+               Gene Tsudik and
+               Andrew Williams},
+  title     = {Hummingbird: Privacy at the Time of {Twitter}},
+  booktitle = {{IEEE} {SP} 2012},
+  pages     = {285--299},
+  year      = {2012},
+  publisher = {{IEEE} Computer Society},
+}
+
+
+
+
+@inproceedings{asiacrypt/CristofaroKT10,
+  author    = {Emiliano De Cristofaro and
+               Jihye Kim and
+               Gene Tsudik},
+  title     = {Linear-Complexity Private Set Intersection Protocols Secure in Malicious
+               Model},
+  booktitle = {{ASIACRYPT} 2010},
+  pages     = {213--231},
+  year      = {2010},
+  series    = {LNCS},
+  volume    = {6477},
+  publisher = {Springer},
+}
+
+@inproceedings{asiacrypt/AndreevaBLMMY14,
+  author    = {Elena Andreeva and
+               Andrey Bogdanov and
+               Atul Luykx and
+               Bart Mennink and
+               Nicky Mouha and
+               Kan Yasuda},
+  title     = {How to Securely Release Unverified Plaintext in Authenticated Encryption},
+  booktitle = {{ASIACRYPT} 2014, Part {I}},
+  pages     = {105--125},
+  year      = {2014},
+  series    = {LNCS},
+  volume    = {8873},
+  publisher = {Springer},
+}
+
+@inproceedings{DBLP:conf/asiacrypt/JovanovicLM14,
+  author    = {Philipp Jovanovic and
+               Atul Luykx and
+               Bart Mennink},
+  title     = {Beyond $2^{c/2}$ Security in Sponge-Based Authenticated Encryption Modes},
+  booktitle = {{ASIACRYPT} 2014, Part {I}},
+  pages     = {85--104},
+  year      = {2014},
+  series    = {LNCS},
+  volume    = {8873},
+  publisher = {Springer},
+}
+
+@inproceedings{DBLP:conf/asiacrypt/JeanNP14,
+  author    = {{J{\'{e}}r{\'{e}}my} Jean and
+               Ivica Nikolic and
+               Thomas Peyrin},
+  title     = {Tweaks and Keys for Block Ciphers: The {TWEAKEY} Framework},
+  booktitle = {{ASIACRYPT} 2014, Part {II}},
+  pages     = {274--288},
+  series    = {LNCS},
+  volume    = {8874},
+  publisher = {Springer},
+  year      = {2014},
+}
+
+
+
+@inproceedings{crypto/GaziPT15,
+  author    = {{Peter Ga\v{z}i} and
+               Krzysztof Pietrzak and
+               Stefano Tessaro},
+  title     = {The Exact {PRF} Security of Truncation: Tight Bounds for Keyed Sponges
+               and Truncated {CBC}},
+  booktitle = {{CRYPTO} 2015, Part {I}},
+  pages     = {368--387},
+  year      = {2015},
+  series    = {LNCS},
+  volume    = {9215},
+  publisher = {Springer},
+}
+
+@inproceedings{DBLP:conf/crypto/CogliatiLS15,
+  author    = {Beno{\^i}t Cogliati and
+               Rodolphe Lampe and
+               Yannick Seurin},
+  title     = {Tweaking Even-Mansour Ciphers},
+  booktitle = {{CRYPTO} 2015, Part {I}},
+  pages     = {189--208},
+  year      = {2015},
+  series    = {LNCS},
+  volume    = {9215},
+  publisher = {Springer},
+}
+
+
+@inproceedings{asiacrypt/MenninkRV15,
+  author    = {Bart Mennink and Reza Reyhanitabar and Damian Viz\'{a}r},
+  title     = {Security of Full-State Keyed and Duplex Sponge: Applications to Authenticated Encryption},
+  booktitle = {{ASIACRYPT} 2015, Part {II}},
+  pages     = {465--489},
+  year      = {2015},
+  series    = {LNCS},
+  volume    = {9453},
+  publisher = {Springer}
+}
+
+@inproceedings{DBLP:conf/asiacrypt/FuhrLS15,
+  author    = {Thomas Fuhr and
+               Ga{\"{e}}tan Leurent and
+               Valentin Suder},
+  title     = {Collision Attacks Against {CAESAR} Candidates - Forgery and Key-Recovery
+               Against {AEZ} and Marble},
+  booktitle = {{ASIACRYPT} 2015, Part {II}},
+  pages     = {510--532},
+  year      = {2015},
+  series    = {LNCS},
+  volume    = {9453},
+  publisher = {Springer}
+}
+
+@inproceedings{DBLP:conf/eurocrypt/HoangKR15,
+  author    = {{Viet Tung} Hoang and
+               Ted Krovetz and
+               Phillip Rogaway},
+  title     = {Robust Authenticated-Encryption {AEZ} and the Problem That It Solves},
+  booktitle = {{EUROCRYPT} 2015, Part {I}},
+  pages     = {15--44},
+  year      = {2015},
+  series    = {LNCS},
+  volume    = {9056},
+  publisher = {Springer}
+}
+
+@inproceedings{DBLP:conf/acisp/DattaN14,
+  author    = {Nilanjan Datta and
+               Mridul Nandi},
+  title     = {{ELmE}: A Misuse Resistant Parallel Authenticated Encryption},
+  booktitle = {{ACISP} 2014},
+  pages     = {306--321},
+  year      = {2014},
+  series    = {LNCS},
+  volume    = {8544},
+  publisher = {Springer}
+}
+
+@inproceedings{DBLP:conf/asiacrypt/AndreevaBLMTY13,
+  author    = {Elena Andreeva and
+               Andrey Bogdanov and
+               Atul Luykx and
+               Bart Mennink and
+               Elmar Tischhauser and
+               Kan Yasuda},
+  title     = {Parallelizable and Authenticated Online Ciphers},
+  booktitle = {{ASIACRYPT} 2013, Part {I}},
+  pages     = {424--443},
+  year      = {2015},
+  series    = {LNCS},
+  volume    = {8269},
+  publisher = {Springer}
+}
+
+@inproceedings{DBLP:conf/ccs/RogawayBBK01,
+  author    = {Phillip Rogaway and
+               Mihir Bellare and
+               John Black and
+               Ted Krovetz},
+  title     = {{OCB}: a block-cipher mode of operation for efficient authenticated
+               encryption},
+  booktitle = {ACM Conference on Computer and Communications Security},
+  year      = {2001},
+  pages     = {196--205},
+  publisher = {ACM}
+}
+
+@inproceedings{DBLP:conf/asiacrypt/Rogaway04,
+  author    = {Phillip Rogaway},
+  title     = {Efficient Instantiations of Tweakable Blockciphers and Refinements
+               to Modes {OCB} and {PMAC}},
+  booktitle = {{ASIACRYPT} 2004},
+  year      = {2004},
+  pages     = {16--31},
+  series    = {LNCS},
+  volume    = {3329},
+  publisher = {Springer}
+}
+
+@inproceedings{DBLP:conf/fse/KrovetzR11,
+  author    = {Ted Krovetz and
+               Phillip Rogaway},
+  title     = {The Software Performance of Authenticated-Encryption Modes},
+  booktitle = {FSE 2011},
+  pages     = {306--327},
+  year      = {2011},
+  series    = {LNCS},
+  volume    = {6733},
+  publisher = {Springer}
+}
+
+@inproceedings{DBLP:conf/fse/BellareRW04,
+  author    = {Mihir Bellare and
+               Phillip Rogaway and
+               David Wagner},
+  title     = {The {EAX} Mode of Operation},
+  booktitle = {FSE 2004},
+  pages     = {389--407},
+  year      = {2004},
+  series    = {LNCS},
+  volume    = {3017},
+  publisher = {Springer}
+}
+
+@inproceedings{DBLP:conf/eurocrypt/Minematsu14,
+  author    = {Kazuhiko Minematsu},
+  title     = {Parallelizable Rate-1 Authenticated Encryption from Pseudorandom Functions},
+  booktitle = {{EUROCRYPT} 2014},
+  year      = {2014},
+  pages     = {275--292},
+  series    = {LNCS},
+  volume    = {8441},
+  publisher = {Springer}
+}
+
+
+
+@inproceedings{NEWS/SLT:facebooksued4,
+  author      = {Will Oremus},
+  title       = {{F}acebook sued for ``reading'' your private messages},
+  booktitle   = {Slate},
+  year        = {2014},
+  month       = {Jan.},
+  note        = {\url{http://slate.me/1evQXN1}, Accessed: Oct. 27, 2014}
+}
+
+@inproceedings{NEWS/FBBug15,
+  author      = {Bosker, Bianca},
+  title       = {{How Facebook Explains User Data Bug That Leaked 6 Million People's Information}},
+  booktitle   = {The Huffington Post},
+  year        = {2015},
+  month       = {Feb.},
+  note        = {\url{http://huff.to/1A4Y5NG}, Accessed: Feb. 18, 2015}
+}
+
+
+% Washington Post
+@inproceedings{NEWS/WP:prism13,
+  author       = {Washington Post},
+  title        = {{NSA} slides explain the {PRISM} data-collection program},
+  booktitle    = {Washington Post},
+  year         = {2013},
+  month        = {Jun.},
+  note         = {\url{http://wapo.st/J2gkLY}. Accessed: Dec 3, 2014},
+}
+
+% Forbes
+@inproceedings{NEWS/FBS:icloud14,
+  author      = {Dave Lewis},
+  title       = {{iCloud Data Breach: Hacking And Celebrity Photos}},
+  year        = {2014},
+  month       = {Sept.},
+  booktitle   = {Forbes Online},
+  note        = {\url{http://onforb.es/1Cmngvl}, Accessed: Jan. 6, 2015},
+}
+
+@inproceedings{HOTNEts:RiedererECKR11,
+  author    = {Christopher Riederer and Vijay Erramilli and
+               Augustin Chaintreau and Balachander Krishnamurthy and
+               Pablo Rodriguez},
+  title     = {For sale : your data, {By} : you},
+  booktitle = {{HOTNETS} 2011},
+  pages     = {13},
+  year      = {2011},
+  month     = {Nov.},
+  publisher = {ACM}
+}
+
+@inproceedings{acsac/StarkHB09,
+  author    = {Emily Stark and
+               Michael Hamburg and
+               Dan Boneh},
+  title     = {Symmetric Cryptography in {Javascript}},
+  booktitle = {{ACSAC} 2009},
+  pages     = {373--381},
+  year      = {2009},
+  publisher = {{IEEE} Computer Society},
+}
+
+
+
+% TweetCipher
+@inproceedings{other/tweetcipher,
+  author       = {Matthew Green and Paulo S. L. M. Barreto and Jean-Philippe Aumasson and Samuel Neves},
+  title        = {{Tweetcipher!}},
+  booktitle    = {},
+  year         = {2013},
+  month        = {June 12},
+  note         = {\url{http://cybermashup.com/2013/06/12/tweetcipher-crypto-challenge/}, June 12, 2013},
+}
+
+
+
+@article{estream/salsa20,
+  title       = {Salsa20},
+  author      = {Bernstein, Daniel J},
+  journal     = {eSTREAM, ECRYPT Stream Cipher Project, Report},
+  volume      = {25},
+  pages       = {2005},
+  year        = {2005}
+}
+
+
+
+@inproceedings{sp/UngerDBFPG015,
+  author    = {Nik Unger and
+               Sergej Dechand and
+               Joseph Bonneau and
+               Sascha Fahl and
+               Henning Perl and
+               Ian Goldberg and
+               Matthew Smith},
+  title     = {SoK: Secure Messaging},
+  booktitle = {{IEEE} {SP} 2015},
+  pages     = {232--249},
+  publisher = {{IEEE} Computer Society},
+  year      = {2015},
+}
+
+
+@inproceedings{wpes/BorisovGB04,
+  author    = {Nikita Borisov and
+               Ian Goldberg and
+               Eric A. Brewer},
+  title     = {Off-the-record communication, or, why not to use {PGP}},
+  booktitle = {{WPES} 2004},
+  pages     = {77--84},
+  year      = {2004},
+  publisher = {{ACM}},  
+}
+
+
+@inproceedings{esorics/BilogrevicFCU14,
+  author    = {Igor Bilogrevic and
+               Julien Freudiger and
+               Emiliano De Cristofaro and
+               Ersin Uzun},
+  title     = {What's the Gist? Privacy-Preserving Aggregation of User Profiles},
+  booktitle = {{ESORICS} 2014},
+  pages     = {128--145},
+  year      = {2014},
+  series    = {LNCS},
+  volume    = {8713},
+  publisher = {Springer},
+}
+
+
+@inproceedings{sp/DanezisG09,
+  author    = {George Danezis and
+               Ian Goldberg},
+  title     = {Sphinx: {A} Compact and Provably Secure Mix Format},
+  booktitle = {{IEEE} S{} {2009}},
+  pages     = {269--282},
+  year      = {2009},
+  publisher = {{IEEE} Computer Society},
+}
+
+@MISC{CAESAR,
+    KEY         = {CAESAR},
+    TITLE       = {{CAESAR: Competition for Authenticated Encryption: Security, Applicability, and Robustness}},
+    MONTH       = {March},
+    YEAR        = {2014}
+}
+
+@MISC{DEMS15,
+    AUTHOR      = {Christoph Dobraunig and Maria Eichlseder and Florian Mendel and Martin {Schl\"{a}ffer}},
+    TITLE       = {{Ascon v1.1}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{MGH+15,
+    AUTHOR      = {{Pawe{\l}} Morawiecki and Kris Gaj and Ekawat Homsirikamol and Krystian Matusiewicz and Josef Pieprzyk and Marcin Rogawski and Marian Srebrny and Marcin {W\'{o}jcik}},
+    TITLE       = {{ICEPOLE v2}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{BDP+15,
+    AUTHOR      = {Guido Bertoni and Joan Daemen and {Micha\"{e}l} Peeters and Gilles {Van Assche} and Ronny {Van Keer}},
+    TITLE       = {{Keyak v2}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{AJN15,
+    AUTHOR      = {{Jean-Philippe} Aumasson and Philipp Jovanovic and Samuel Neves},
+    TITLE       = {{NORX v2.0}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{GMS15,
+    AUTHOR      = {Danilo Gligoroski and Hristina Mihajloska and Simona Samardjiska and {H{\aa}kon} Jacobsen and Mohamed {El-Hadedy} and {Rune Erlend} Jensen},
+    TITLE       = {{$\pi$-Cipher v2.0}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{ABB+15,
+    AUTHOR      = {Elena Andreeva and {Beg\"{u}l} Bilgin and Andrey Bogdanov and Atul Luykx and Florian Mendel and Bart Mennink and Nicky Mouha and Qingju Wang and Kan Yasuda},
+    TITLE       = {{PRIMATEs v1.02}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{SB15,
+    AUTHOR      = {{Markku-Juhani O.} Saarinen and {Billy B.} Brumley},
+    TITLE       = {{STRIBOB v2}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{JNP15Deoxys,
+    AUTHOR      = {{J\'er\'emy} Jean and Ivica {Nikoli\'c} and Thomas Peyrin},
+    TITLE       = {{Deoxys v1.3}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{JNP15Joltik,
+    AUTHOR      = {{J\'er\'emy} Jean and Ivica {Nikoli\'c} and Thomas Peyrin},
+    TITLE       = {{Joltik v1.3}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{STA+15,
+    AUTHOR      = {Yu Sasaki and Yosuke Todo and Kazumaro Aoki and Yusuke Naito and Takeshi Sugawara and Yumiko Murakami and Mitsuru Matsui and Shoichi Hirose},
+    TITLE       = {{Minalpher v1.1}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{DN15,
+    AUTHOR      = {Nilanjan Datta and Mridul Nandi},
+    TITLE       = {{ELmD v2.0}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{CMN+15,
+    AUTHOR      = {Simon Cogliani and Diana{-}Stefania Maimut and David Naccache and Rodrigo Portella do Canto and Reza Reyhanitabar and Serge Vaudenay and Damian Viz{\'{a}}r},
+    TITLE       = {{Offset Merkle-Damgård (OMD) version 2.0}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{DEMS14,
+    AUTHOR      = {Christoph Dobraunig and Maria Eichlseder and Florian Mendel and Martin {Schl\"{a}ffer}},
+    TITLE       = {{Ascon v1}},
+    YEAR        = {2014},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{MGH+14,
+    AUTHOR      = {{Pawe{\l}} Morawiecki and Kris Gaj and Ekawat Homsirikamol and Krystian Matusiewicz and Josef Pieprzyk and Marcin Rogawski and Marian Srebrny and Marcin {W\'{o}jcik}},
+    TITLE       = {{ICEPOLE v1}},
+    YEAR        = {2014},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{BDP+14,
+    AUTHOR      = {Guido Bertoni and Joan Daemen and {Micha\"{e}l} Peeters and Gilles {Van Assche} and Ronny {Van Keer}},
+    TITLE       = {{Keyak v2}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{AJN14,
+    AUTHOR      = {{Jean-Philippe} Aumasson and Philipp Jovanovic and Samuel Neves},
+    TITLE       = {{NORX v1}},
+    YEAR        = {2014},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{GMS14,
+    AUTHOR      = {Danilo Gligoroski and Hristina Mihajloska and Simona Samardjiska and {H{\aa}kon} Jacobsen and Mohamed {El-Hadedy} and {Rune Erlend} Jensen},
+    TITLE       = {{$\pi$-Cipher v1}},
+    YEAR        = {2014},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{ABB+14,
+    AUTHOR      = {Elena Andreeva and {Beg\"{u}l} Bilgin and Andrey Bogdanov and Atul Luykx and Florian Mendel and Bart Mennink and Nicky Mouha and Qingju Wang and Kan Yasuda},
+    TITLE       = {{PRIMATEs v1}},
+    YEAR        = {2014},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{Saa14STRIBOB,
+    AUTHOR      = {{Markku-Juhani O.} Saarinen},
+    TITLE       = {{STRIBOB r1}},
+    YEAR        = {2014},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{HKR15AEZ,
+    AUTHOR      = {Viet Tung Hoang and Ted Krovetz and Phillip Rogaway},
+    TITLE       = {{AEZ v4: Authenticated Encryption by Enciphering}},
+    YEAR        = {2015},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@MISC{KLL+14,
+    AUTHOR      = {{Elif Bilge} Kavun and {Martin M.} Lauridsen and Gregor Leander and Christian Rechberger and Peter Schwabe and Tolga {Yal\c{c}{\i}n}},
+    TITLE       = {{Pr{\o}st v1}},
+    YEAR        = {2014},
+    NOTE        = {Submission to CAESAR competition}
+}
+
+@inproceedings{DBLP:conf/fse/AndersonB96a,
+  author    = {Ross J. Anderson and
+               Eli Biham},
+  title     = {Two Practical and Provably Secure Block Ciphers: {BEARS} and {LION}},
+  booktitle = {{FSE} '96},
+  pages     = {113--120},
+  series    = {LNCS},
+  volume    = {1039},
+  publisher = {Springer},
+  year      = {1996},
+}
+
+@inproceedings{DBLP:conf/fse/Fluhrer01a,
+  author    = {Scott R. Fluhrer},
+  title     = {Cryptanalysis of the {SEAL} 3.0 Pseudorandom Function Family},
+  booktitle = {{FSE} 2001},
+  pages     = {135--143},
+  series    = {LNCS},
+  volume    = {2355},
+  publisher = {Springer},
+  year      = {2002},
+}
+
+@inproceedings{DBLP:conf/eurocrypt/Stevens13,
+  author    = {Marc Stevens},
+  title     = {New Collision Attacks on {SHA-1} Based on Optimal Joint Local-Collision
+               Analysis},
+  booktitle = {{EUROCRYPT} 2013},
+  year      = {2013},
+  pages     = {245--261},
+  series    = {LNCS},
+  volume    = {7881},
+  publisher = {Springer}
+}
+
+@inproceedings{DBLP:conf/crypto/KarpmanPS15,
+  author    = {Pierre Karpman and
+               Thomas Peyrin and
+               Marc Stevens},
+  title     = {Practical Free-Start Collision Attacks on 76-step {SHA-1}},
+  booktitle = {{CRYPTO} 2015, Part {I}},
+  pages     = {623--642},
+  year      = {2015},
+  series    = {LNCS},
+  volume    = {9215},
+  publisher = {Springer},
+}
+
+@misc{DBLP:journals/iacr/StevensKP15,
+  author    = {Marc Stevens and
+               Pierre Karpman and
+               Thomas Peyrin},
+  title     = {Freestart Collision on Full {SHA-1}},
+  howpublished={Cryptology ePrint Archive, Report 2015/967},
+  year      = {2015},
+}
+
+@inproceedings{DBLP:conf/asiacrypt/CanniereR06,
+  author    = {Christophe {De Canni{\`{e}}re} and
+               Christian Rechberger},
+  title     = {Finding {SHA-1} Characteristics: General Results and Applications},
+  booktitle = {{ASIACRYPT} 2006},
+  pages     = {1--20},
+  year      = {2006},
+  series    = {LNCS},
+  volume    = {4284},
+  publisher = {Springer},
+}
+
+
+
+@inproceedings{DBLP:conf/crypto/WangYY05a,
+  author    = {Xiaoyun Wang and
+               {Yiqun Lisa} Yin and
+               Hongbo Yu},
+  title     = {Finding Collisions in the Full {SHA-1}},
+  booktitle = {{CRYPTO} 2005},
+  pages     = {17--36},
+  year      = {2005},
+  series    = {LNCS},
+  volume    = {3621},
+  publisher = {Springer},
+}
+
+@inproceedings{van2015vuvuzela,
+  title={Vuvuzela: Scalable private messaging resistant to traffic analysis},
+  author={Van Den Hooff, Jelle and Lazar, David and Zaharia, Matei and Zeldovich, Nickolai},
+  booktitle={Proceedings of the 25th Symposium on Operating Systems Principles},
+  pages={137--152},
+  year={2015},
+  organization={ACM}
+}
+
+@incollection{gunther2012cryptographic,
+  title={Cryptographic treatment of private user profiles},
+  author={G{\"u}nther, Felix and Manulis, Mark and Strufe, Thorsten},
+  booktitle={Financial Cryptography and Data Security},
+  pages={40--54},
+  year={2012},
+  publisher={Springer}
+}
+
+@MISC{Mennink16,
+    AUTHOR      = {Bart Mennink},
+    TITLE       = {{Observation on weak keys for AEZ}},
+    YEAR        = {2016},
+    NOTE        = {{CAESAR} mailing list}
+}
+
+@inproceedings{DBLP:conf/asiacrypt/AumassonCMOPV09,
+  author    = {{Jean-Philippe} Aumasson and {\c{C}agdas} {\c{C}alik} and Willi Meier and Onur {{\"O}zen} and {Raphael C.-W.} Phan and Kerem {Var{\i}c{\i}}},
+  title     = {Improved Cryptanalysis of {Skein}},
+  booktitle = {{ASIACRYPT} 2009},
+  pages     = {542--559},
+  year      = {2009},
+  series    = {LNCS},
+  volume    = {5912},
+  publisher = {Springer},
+}
+
+@inproceedings{DBLP:conf/asiacrypt/KhovratovichNR10,
+  author    = {Dmitry Khovratovich and Ivica {Nikoli\'c} and Christian Rechberger},
+  title     = {Rotational Rebound Attacks on Reduced {Skein}},
+  booktitle = {{ASIACRYPT} 2010},
+  pages     = {1--19},
+  year      = {2010},
+  series    = {LNCS},
+  volume    = {6477},
+  publisher = {Springer},
+}
+
+@inproceedings{DBLP:conf/fse/KhovratovichN10,
+  author    = {Dmitry Khovratovich and
+               Ivica {Nikoli\'c}},
+  title     = {Rotational Cryptanalysis of {ARX}},
+  booktitle = {{FSE} 2010},
+  pages     = {333--346},
+  year      = {2010},
+  series    = {LNCS},
+  volume    = {6147},
+  publisher = {Springer},
+}
+
+@inproceedings{DBLP:conf/fse/KhovratovichNPS15,
+  author    = {Dmitry Khovratovich and
+               Ivica {Nikoli\'c} and
+               Josef Pieprzyk and
+               Przemys{\l}aw Soko{\l}owski and
+               Ron Steinfeld},
+  title     = {Rotational Cryptanalysis of {ARX} Revisited},
+  booktitle = {{FSE} 2015},
+  pages     = {519--536},
+  year      = {2015},
+  series    = {LNCS},
+  volume    = {9054},
+  publisher = {Springer},
+}
+
+@inproceedings{DBLP:conf/ispec/ChenJ10,
+  author    = {Jiazhe Chen and
+               Keting Jia},
+  title     = {Improved Related-Key Boomerang Attacks on Round-Reduced {Threefish-512}},
+  booktitle = {{ISPEC} 2010},
+  pages     = {1--18},
+  year      = {2010},
+  series    = {LNCS},
+  volume    = {6047},
+  publisher = {Springer},
+}
+
+@inproceedings{DBLP:conf/sacrypt/YuCW12,
+  author    = {Hongbo Yu and
+               Jiazhe Chen and
+               Xiaoyun Wang},
+  title     = {The Boomerang Attacks on the Round-Reduced {Skein-512}},
+  booktitle = {{SAC} 2012},
+  pages     = {287--303},
+  year      = {2013},
+  series    = {LNCS},
+  volume    = {7707},
+  publisher = {Springer},
+}
+
+@inproceedings{DBLP:conf/ctrsa/LeurentR12,
+  author    = {Ga{\"{e}}tan Leurent and
+               Arnab Roy},
+  title     = {Boomerang Attacks on Hash Function Using Auxiliary Differentials},
+  booktitle = {{CT-RSA} 2012},
+  pages     = {215--230},
+  year      = {2012},
+  series    = {LNCS},
+  volume    = {7178},
+  publisher = {Springer},
+}
+
+@inproceedings{NY16,
+ author    = {Yusuke Naito and Kan Yasuda},
+  title     = {New Bounds for Keyed {Sponges} with Extendable Output: Independence between Capacity and Message Length},
+  booktitle = {{FSE} 2016},
+  series    = {LNCS},
+  publisher = {Springer},
+  year      = {2016},
+  note      = {To appear}
+}

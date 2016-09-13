@@ -1,0 +1,720 @@
+% This is LLNCS.DEM the demonstration file of
+% the LaTeX macro package from Springer-Verlag
+% for Lecture Notes in Computer Science,
+% version 2.4 for LaTeX2e as of 16. April 2010
+%
+
+\documentclass[11pt]{llncs}
+\usepackage[a4paper,hmargin=1.4in,vmargin=1.4in]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%%% General Packages %%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pdflscape}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath,mathtools}
+\usepackage{inputenc}
+\usepackage{hyperref}
+\usepackage{paralist}   % Required for compactum
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{threeparttable}
+\usepackage[table]{xcolor}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\usepackage{enumerate}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{cite}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+%%%%%%%%%%%%%%%%%%%%%%%% Custom Macros %%%%%%%%%%%%%%%%%%%%%%%%
+
+% References
+% -------------------------------------------------------
+\newcommand{\figref}[1]{{Figure}~\ref{#1}}      % Figure
+\newcommand{\tabref}[1]{{Table}~\ref{#1}}       % Table
+\newcommand{\secref}[1]{{Section}~\ref{#1}}     % Section
+\newcommand{\appref}[1]{{Appendix}~\ref{#1}}    % Appendix
+\newcommand{\defref}[1]{{Definition}~\ref{#1}}  % Definition
+\newcommand{\thref}[1]{{Theorem}~\ref{#1}}      % Theorem
+\newcommand{\remref}[1]{{Remark}~\ref{#1}}      % Remark
+% -------------------------------------------------------
+
+% Description
+% -------------------------------------------------------
+\newcommand{\desc}[1]{\vspace{0.15cm} \noindent \textbf{#1}}
+
+% Tweety-related
+% -------------------------------------------------------
+\newcommand{\tweety}{\ensuremath{\mathrm{Tweety}}\xspace}
+\newcommand{\key}{\ensuremath{\mathit{key}}}
+\newcommand{\hasht}{\ensuremath{\mathit{ht}}}
+\newcommand{\tstamp}{\ensuremath{\mathit{ts}}}
+\newcommand{\msg}{\ensuremath{\mathit{msg}}}
+\newcommand{\ctxt}{\ensuremath{\mathit{ctxt}}}
+\newcommand{\fish}{\ensuremath{\mathrm{3fish}}\xspace}
+\newcommand{\LRW}{\ensuremath{\mathrm{LRW}}\xspace}
+\newcommand{\LRWa}{\ensuremath{\mathrm{LRW1}}\xspace}
+\newcommand{\LRWb}{\ensuremath{\mathrm{LRW2}}\xspace}
+\newcommand{\TwSp}{\ensuremath{\mathrm{TwSp}}\xspace}
+\newcommand{\Sp}{\ensuremath{\mathrm{Sp}}\xspace}
+\newcommand{\keccak}{\ensuremath{\pi_{\mathrm{keccak}}}\xspace}
+\newcommand{\IKS}{\ensuremath{\mathrm{IKS}}\xspace}
+
+% Others
+% -------------------------------------------------------
+\newcommand{\etal}{et al.}
+\newcommand{\xor}{\oplus}
+\newcommand{\getR}{\xleftarrow{{\scriptscriptstyle\$}}}
+\newcommand{\tE}{\widetilde{E}}
+\newcommand{\tpi}{\widetilde{\pi}}
+\newcommand{\func}{\mathsf{Func}}
+\newcommand{\perm}{\mathsf{Perm}}
+\newcommand{\tperm}{\widetilde{\mathsf{Perm}}}
+\newcommand{\RO}{\mathcal{RO}}
+\newcommand{\bin}[1]{\{0,1\}^{#1}}
+\newcommand{\bink}{\bin{\kappa}}
+\newcommand{\bint}{\bin{\leq\tau}}
+\newcommand{\bins}{\bin{\sigma}}
+\newcommand{\binm}{\bin{\leq\mu}}
+\newcommand{\binn}{\bin{\leq\nu}}
+\newcommand{\adv}[2]{\ensuremath{\mathbf{Adv}_{#2}^{\mathrm{#1}}}}
+\newcommand{\advsprp}[1]{\adv{\widetilde{sprp}}{#1}}
+\newcommand{\advcpa}[1]{\adv{cpa}{#1}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\calK}{\mathcal{K}} %key
+\newcommand{\calT}{\mathcal{T}} %cipher-tweak
+\newcommand{\calM}{\mathcal{M}} %cipher-in
+\newcommand{\calC}{\mathcal{C}} %cipher-out
+\newcommand{\pad}{\mathsf{pad}}
+\newcommand{\unpad}{\mathsf{unpad}}
+\definecolor{lightgray}{gray}{0.9}
+% -------------------------------------------------------
+
+
+\begin{document}
+
+\title{Tweety: Tweet Secrets Efficiently}
+\author{Filipe Beato\inst{1} \and Kimmo Halunen\inst{1,2} \and Bart Mennink\inst{1}}
+% \author{}
+
+\institute{
+    ESAT/COSIC, KU Leuven, and iMinds, Belgium\\\email{\{first.lastname\}@esat.kuleuven.be}
+    \and
+    VTT Technical Research Center of Finland, Oulu, Finland\\\email{kimmo.halunen@vtt.fi}
+    }
+% \institute{}
+
+
+\maketitle
+
+
+\begin{abstract}
+
+Online social networks such as Twitter have users in the hundreds of millions, providing easy and reliable channels for dissemination of information. Twitter plays a fundamental role in quick dissemination of information as well as coordinating and amplifying grassroots movements, as demonstrated by recent Arabic spring events.
+%
+At the same time, those networks store treasure troves of information to support their economical business model through targeted advertisements, and have become prime targets of censorship and surveillance based on the content shared.
+%
+% Add more privacy issues + motivation
+%
+In this paper, we propose Tweety, a novel and secure system for privacy in Twitter, based on tweakable blockciphers and Sponge functions tailored for usage in social media websites. Tweety guarantees semantic security while complying with the commonly imposed space restrictions and allowing limited targeted advertisement. After formalizing Tweety we present three distinct designs based on different primitives that offer higher level of security than existing alternatives.
+Furthermore, we implemented a prototype demonstrating the improved efficiency and low overhead of our constructions, mainly related to the increased key sizes for better security.
+% Anonymity? On Twitter?
+% \bigskip\noindent{\bf Keywords.} \ TODO.
+\keywords{Privacy, social media, tweakable blockciphers, Sponge.}
+\end{abstract}
+
+
+\section{Introduction}\label{sec:intro}
+
+%MAIN IDEA: ``tweak''-tweakable blockciphers for secret tweets!
+Online Social Networks (OSNs), such as Facebook, Google+, and Twitter have become prominent communication channels for millions of users, providing  efficient, and reliable sharing and dissemination channels. Given their prominent role and design, OSNs end up centralizing and storing large amounts of information, exposing users to several privacy threats.
+In particular, Twitter has facilitated a very rapid-fire style of information sharing helping for example grassroots democracy movements in many places over the world. The most popular OSNs provide users with certain privacy controls over their content. However, this process relies not only on the diligence of the users but also on the trustworthiness of the providers in protecting stored content from possible adversaries. In addition, providers require access to the content in order to comply with their economical business model, such as targeted advertisement~\cite{NEWS/SLT:facebooksued4,HOTNEts:RiedererECKR11}, consequently exposing users to several privacy issues. Moreover, the reports of mass breaches on the information shared on OSNs are becoming increasingly common~\cite{NEWS/FBBug15}, as is evident from the recent accounts of surveillance programs like Prism~\cite{NEWS/WP:prism13}, and the recent iCloud mega leak~\cite{NEWS/FBS:icloud14}, amplifying the privacy issues.
+
+%
+Therefore, these issues motivate the need to implement more reliable privacy protection mechanisms, such as end-to-end encryption. One possible solution is to encrypt all the data shared on OSNs, for instance using a standard encryption modes of operation, such as AES-CTR or AES-CBC. However, those constructions have several shortcomings. For instance, sharing encrypted information breaks the economical business model relying on the mining of the shared content to provide targeted advertisements, which could cause providers to restrict and censor the distribution of the encrypted content. Also, those general constructions do not take into account the limitations and specific properties of OSN, such as the space constraints (140 characters, about 1120~$bits$) and hashtags in the case of Twitter and Instagram. For instance, using AES-128 on CTR or CBC mode of operation\footnote{http://codecereal.blogspot.ch/2011/06/encrypted-tweets.html} to fit those properties, only achieves $64$-bit security (cf.~Bellare \etal~\cite{BDJR97}) while requiring at least $8$ AES evaluations.
+
+%
+In this paper we propose \emph{Tweety}, a novel privacy protection mechanism tailored for Twitter-like OSNs, that selectively reveals parts of your shared content while keeping the majority of the data available only to selected recipients. Tweety employs recent advances in tweakable blockciphers and Sponge functions to achieve efficient encryption and high levels of security. We show that these constructions achieve provable security that is better than existing possibilities for this type of encryption with a tolerable cost in key size. Furthermore, our system helps to save some computational resources at the recipient side of the communications as it is possible to decide whether or not to decrypt the message based on the hashtags. For instance, one could choose not to decrypt messages with the hashtag ``\#football'' from a certain (or every) user. This could provide energy saving benefits with some resource constrained devices, while enabling providers to use this information to support their economical business model.
+
+%
+The paper is organized as follows: \secref{sec:model} introduces the required notation, and formally describes Tweety and the assumed threat model. After describing in \secref{sec:tweetytbc} the basic approach of Tweety based on Threefish \cite{FLS+11}, \secref{sec:tweetylrw} extends to allow expanded tweak space. \secref{sec:tweetySponge} presents another version of Tweety based on Sponge functions \cite{BDPA07}. Then, we describe our proof-of-concept implementation in \secref{sec:prototype}, while \secref{sec:relatedwork} reviews related work. Finally, \secref{sec:concl} discusses the results and concludes the paper.
+
+
+\section{Model}\label{sec:model}
+This section introduces the required notation, Tweety, and the respective threat model. Without loss of generality, we consider users to be registered, use, and share private information on Twitter. We also assume that users share a symmetric key using auxiliary out-of-band channels.
+
+
+\subsection{Notation}
+For $n\in\mathbb{N}$, $\bin{n}$ is the set of $n$-bit strings, and $\bin{\leq n}=\bigcup_{i=0}^n\bin{i}$. Furthermore, if $M\in\bin{\leq n-1}$, then $\pad_n(M)=M\|10^{n-1-|M|}$. For a string $N\in\bin{n}$ we define by $\unpad_n(N)$ the unique string $M\in\bin{\leq n-1}$ such that $\pad_n(M)=N$. For two bit strings $M,N$, their concatenation is denoted $M\|N$, and if $M$ and $N$ are of the same size, $M\xor N$ denotes their bitwise XOR. For $m\leq n$ and $N\in\bin{n}$, we denote by $\lceil N\rceil_m$ the leftmost $m$ bits and by $\lfloor N\rfloor_{n-m}$ the rightmost $n-m$ bits of $N$, in such a way that $N=\lceil N\rceil_m\|\lfloor N\rfloor_{n-m}$.
+
+% ------------------------------------------------------------------------
+\begin{figure}[t]
+    \centering
+    \scalebox{1}{
+    \begin{tikzpicture}%
+    [%
+        auto,font=\small\sffamily,
+        myarrow/.style={-angle 60,>=stealth',shorten >=1pt}
+    ]
+        % Top rectangle
+        \draw [fill=white] (0,4.5) rectangle (10,5.5);
+        \node at (5,5) {total size $t = 1120~bits$ (UTF-8 \emph{140 ``[A-Za-z0-9\_]'' characters)}};
+        \draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=4pt},yshift=2pt] (10,5.5) -- (0,5.5);
+        \node at (5,6.5) {Normal Tweet};
+
+        \draw [fill=white] (0,3) rectangle (7,4);
+        \node at (3.5,3.5) {message (\msg)};
+        %
+        \draw [fill=white] (7.1,3) rectangle (10,4);
+        \node at (8.5,3.5) {\#hashtags (\hasht)};% $\tau = t - \mu$};
+        %
+        \draw[dashed,thin] (0,4) -- (0,4.5);
+        \draw[dashed,thin] (10,4) -- (10,4.5);
+
+        % encrypt block
+        \draw [fill=white] (4,1.5) rectangle (6,2.5);
+        \node at (5,2) {Tweety};
+
+        % Bottom rectangles ....
+        % left
+        \draw [fill=white] (0,0) rectangle (7,1);
+        \node at (3.5,0.5) {encryption (\ctxt)};
+        \draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=4pt},yshift=2pt] (0,0) -- (10,0);
+        \node at (5,-1) {Tweety (Encrypted) Output};
+        % \node at (3.5,-1) {Tweakable blockcipher Output};
+
+        % right
+        \draw [fill=white] (7.1,0) rectangle (10,1);
+        \node at (8.5,0.5) {\#hashtags (\hasht)};
+        % \draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=4pt},yshift=2pt] (7.1,-0.3) -- (10,-0.3);
+        % \node[text width=30mm,align=center] at (8.5,-1.3) {Public Tweaks (e.g., \#hashtags)};
+
+        % connector (arrows)
+        % \path[dashed,myarrow] (0,3) edge (0,1)
+                              % (10,3) edge (10,1);
+        \draw[myarrow,thick] (5,3) -- (5,2.5);
+        \draw[myarrow,thick] (5,1.5) -- (5,1);
+        \draw[myarrow,thick,angle 60-angle 60] (8.5,1) |- (6,2);
+        \draw[thick] (8.5,2) -- (8.5,3);
+        \node (l) at (2,2.3) {$\key$};
+        \node (t) at (2,1.7) {$\tstamp$};
+        \draw[myarrow,thick] (l) -- (4,2.3);
+        \draw[myarrow,thick] (t) -- (4,1.7);
+        %
+    \end{tikzpicture}
+    }
+    \caption{Tweety design overview.}
+    \label{fig:twitteroverview}
+\end{figure}
+% ------------------------------------------------------------------------
+\subsection{Tweety}\label{sec:tweety}
+
+Tweety allows users to encrypt content of the tweets while leaving (some) hashtags public. These public hashtags serve a twofold purpose: information for target advertisements, and to allow users to enforce selective control of tweets. \figref{fig:twitteroverview} illustrates the general design of Tweety.
+%
+The key principle of \tweety is inspired by tweakable blockciphers, where the public hashtags and also the time stamp of the tweet act as the tweak. Conversely, \tweety operates by parsing a $1120$-bit tweet into a message/hashtag-tuple $(\msg,\hasht)\in\binm\times\bint$, behaving then like a symmetric encryption scheme: using a secret key $\key\in\bink$, the message $\msg$ is encrypted to a ciphertext $\ctxt$, where $\hasht$ and time stamp $\tstamp\in\bins$ function as the tweak. We assume that two tweets under the same secret key are ever made with the same time stamp.
+%
+% \subsection{Specification}
+
+More formally, we consider \tweety to be composed of three algorithms. \texttt{KeyGen}, \texttt{PTweet}, and \texttt{PRead}. \texttt{KeyGen} is a randomized algorithm that gets as input $\kappa\in\mathbb{N}$ and outputs a random key $\key \leftarrow \bink$, whereas the \texttt{PTweet} and \texttt{PRead} algorithms are defined as follows:
+
+\begin{itemize}
+    \item[]\texttt{PTweet}: $\bink\times\binm\times\bint\times\bins \to \binn\times\bint\,,$
+    \item[]\ \phantom{\texttt{PTweet}:}$(\key, \msg, \hasht, \tstamp) \mapsto (\ctxt, \hasht)$\,, \\
+    \item[]\texttt{PRead}: \ $\bink\times\binn\times\bint\times\bins \to \binm\,,$
+    \item[]\ \phantom{\texttt{PTweet}:}$(\key, \ctxt, \hasht, \tstamp) \mapsto \msg$\,.
+\end{itemize}
+%
+The output of $\hasht$ by \texttt{PTweet} will sometimes be left out and considered to be implicit. For a plain tweet $(\msg,\hasht)\in\binm\times\bint$, the encrypted tweet is $(\ctxt,\hasht)\in\binn\times\bint$ (the time stamp $\tstamp$ is implicit from the tweet). Note that we allow for a small amount of ciphertext expansion (from $\mu$ to $\nu$ bits), as long as $\tweety$ is properly invertible and $\mu+\tau\leq\nu+\tau\leq 1120$. Inspired by the Unix time stamping, the size of the time stamp, $\sigma$, is considered to be between $32$ and $64$ bits. In more detail, the Unix time stamp is conventionally written in $32$ bits. This is enough until January 19, 2038, before which all systems should be migrated to $64$-bit stamps.
+
+\subsection{Threat Model}
+%We consider an adversary to be any entity attempting to passively access the shared information by monitoring the communication channel, with no incentive to tamper with the content. Such adversaries should not learn the content shared, beyond that revealed in the hashtags. Otherwise the adversary is considered to break both confidentiality and privacy.
+We consider an adversary $\A$ to be any entity attempting to passively access the shared information by monitoring the communication channel, with no incentive to tamper with the content. However, it is allowed to generate encrypted tweets under a secret and unknown key itself. In this case, $\A$ should not learn the encrypted content, beyond that revealed in the hashtags.
+
+More technically, we consider adversary $\A$ that has query access to the encryption functionality $\mathtt{PTweet}$ under a secret key $k$, and it tries to find irregularities among the queries, i.e., some relation that is not likely to hold for a random function. Here, $\A$ is required to be time stamp respecting, meaning that every query must be made under a different time stamp (see also \secref{sec:concl}).\footnote{More formally, we assume that two tweets are never posted under the same key at the exact same time. This is reasonable if the key is used by a relatively small set of users. TODOBART} Let $\func(\alpha,\beta)$ be the set of all functions $f:\bin{\alpha}\to\bin{\beta}$. The advantage of an adversary $\A$ in breaking the security of \tweety is defined as follows:
+%
+\begin{align*}
+    \advcpa{\tweety}(\A) = \left|
+        \begin{array}{l}
+        \Pr\left(\key\getR\mathtt{KeyGen}(\kappa)\;:\;\A^{\mathtt{PTweet}_{\key}} = 1 \right)\:-\\[6pt]\qquad\qquad\qquad\qquad\qquad\Pr\left(\$\getR\func(\mu+\tau+\sigma,\nu)\;:\;\A^{\$} = 1\right)
+        \end{array} \right|\,.
+\end{align*}
+%
+We define by $\advcpa{\tweety}(Q,T)$ the maximum advantage over all adversaries that make at most $Q$ encryption queries and operate in time $T$.
+
+% \subsection{Realization}
+% A way to realize \tweety is by using a standard encryption mode of operation, such as AES-CTR or AES-CBC. However, this construction only achieves $64$-bit security (cf.~Bellare \etal~\cite{BDJR97}) and needs at least $8$ AES evaluations (not taking into account the handling of the tweak). Because tweets are of a relatively short (but larger than $128$ bits) length, better options are to use dedicated functions, as these may be more efficient and (as becomes clear later) achieve a much higher level of security. We identify three basic approaches in realizing \tweety, each discussed in the following three sections.
+% \secref{sec:tweetytbc}, \secref{sec:tweetylrw}, and \secref{sec:tweetySponge}.
+
+% \section{Approach 1: Large Tweakable blockcipher}
+\section{Tweety: Basic Construction}\label{sec:tweetytbc}
+The first approach is to apply a large tweakable blockcipher. A tweakable blockcipher $\tE:\calK\times\calT\times\calM\to\calM$ takes as input a key $k\in\calK$, a tweak $t\in\calT$, and a message $m\in\calM$, and outputs a ciphertext $c\in\calM$. It is a permutation for every choice of $(k,t)$.
+
+For \tweety, we suggest using \emph{Threefish}, a tweakable blockcipher by Ferguson et al.~used for the Skein hash function family~\cite{FLS+11}. Threefish supports block sizes of 256, 512, and 1024 bits. The key size equals the block size, and the tweak size is $128$ bits. We focus on the largest variant, Threefish-1024, which for readability we simply denote \fish:
+%
+\begin{align*}
+    \fish: \bin{1024}\times\bin{128}\times\bin{1024}&\to\bin{1024}\,,\\
+       (k,t,m)&\mapsto c\,.
+\end{align*}
+%
+\fish can be used to encrypt tweets directly, a construction which we dub $\tweety^\fish$. It operates on keys of size $\kappa=1024$ bits, and the encryption consists of putting $m=\pad_{1024}(\msg)$ and $t=\pad_{128}(\tstamp\|\hasht)$. This works as long as $\mu\leq 1023$ and $\sigma+\tau\leq 127$. In order to be able to decrypt tweets properly, the ciphertext $\ctxt$ will always be \emph{exactly} $\nu=1024$ bits long. Note that if $\sigma=32$, these parameters satisfy $\mu+\tau\leq\nu+\tau\leq 1120$. Formally, the encryption and decryption of $\tweety^\fish$ are defined as follows:
+
+\begin{description}
+    \item[]\texttt{PTweet$^\fish(\key, \msg, \hasht, \tstamp)$}: $\ctxt = \fish(\key,\pad_{128}(\tstamp\|\hasht),\pad_{1024}(\msg))\,,$ \\
+    \item[]\texttt{PRead$^\fish(\key, \ctxt, \hasht, \tstamp)$}: $\msg = \unpad_{1024}(\fish^{-1}(\key,\pad_{128}(\tstamp\|\hasht),\ctxt))\,.$
+
+    % \begin{split}
+    %     \mathtt{PTweet}^\fish(\key, \msg, \hasht, \tstamp) &= \ctxt = \fish(\key,\pad_{128}(\tstamp\|\hasht),\pad_{1024}(\msg))\,\\
+    %     \mathtt{PRead}^\fish(\key, \ctxt, \hasht, \tstamp) &= \msg = \unpad_{1024}(\fish^{-1}(\key,\pad_{128}(\tstamp\|\hasht),\ctxt))\,.
+    % \end{split}
+\end{description}\label{eqn:tweetyfish}
+
+\desc{Security.}
+In this section we formally derive the security under the assumption that \fish is a secure tweakable blockcipher, so that the security of $\tweety^{\fish}$ directly follows.
+%
+The security of a tweakable blockcipher $\tE:\calK\times\calT\times\calM\to\calM$ is captured by an adversary $\A$ that has adaptive two-sided oracle access to either $\tE_k$ for some secret key $k\getR\calK$, or ideal tweakable permutation $\tpi$ with tweak space $\calT$ and message space $\calM$, and tries to distinguish both worlds. Denote by $\tperm(\calT,\calM)$ the set of tweakable permutations. We define the strong PRP security of $\tE$ as
+\begin{align*}
+    \advsprp{\tE}(\A) &= \left| \Pr\left(k\getR\calK\;:\;\A^{\tE_k^{\pm}} = 1 \right) - \Pr\left(\tpi\getR\tperm(\calT,\calM)\;:\;\A^{\tpi^{\pm}} = 1\right) \right|\,.
+\end{align*}
+By $\advsprp{\tE}(Q,T)$ we denote the maximum security advantage of any adversary $\A$ that makes $Q$ queries and runs in time $T$.
+
+\begin{theorem}\label{thm:tbc}
+    We have $\advcpa{\tweety^{\fish}}(Q,T) \leq \advsprp{\fish}(Q,T')$, where $T'\approx T$.
+\end{theorem}
+
+\begin{proof}
+    Let $\A$ be an adversary that makes $Q$ queries and runs in time $T$. It has access to either $\mathtt{PTweet}_\key$ or $\$$. Note that $Q$ evaluations of $\tweety^{\fish}$ induce $Q$ evaluations of $\fish$. We replace $\fish$ by an ideal tweakable permutation $\tpi\getR\tperm(\bin{128},\bin{1024})$. Now, any query $\mathtt{PTweet}^{\tpi}(\key, \msg, \hasht, \tstamp)$ is responded with
+    \begin{align*}
+    \ctxt = \tpi(\key,\pad_{128}(\tstamp\|\hasht),\pad_{1024}(\msg))\,.
+    \end{align*}
+    As $\A$ is required to be time stamp respecting, every query is made under a new time stamp, which means that every query initiates a new instance of $\tpi$, and $\ctxt$ is a random $1024$-bit value. This means that $\mathtt{PTweet}^{\tpi}_\key$ is perfectly indistinguishable from $\$$. This completes the proof.
+    \qed
+\end{proof}
+
+% \section{Approach 2: Large Tweakable blockcipher with Expanded Tweak Space}
+\section{Tweety with Expanded Tweak Space}\label{sec:tweetylrw}
+
+The Tweety basic construction presents a rather small tweak space, and the usage of a larger time stamp results in a limitation on the size of the hashtag. A way to resolve this is to employ a random oracle that maps the time stamp and (larger) hashtag to a string of size $128$ bits, but this would significantly degrade the security of the construction to $64$ bits. Another way to enlarge the tweak space without adjusting the cipher itself is by using it in a tweakable mode of operation.
+%TODO some Ian-stuff.
+
+Liskov \etal~\cite{LRW02} introduced two tweakable modes of operation: while these constructions are originally designed to add a tweak input to a blockcipher, they can equally well be applied to tweakable blockciphers themselves to enlarge the tweak space. One of these constructions makes two evaluations of the underlying cipher, while the other construction is based on one blockcipher call and an evaluation of a universal hash function. We use the first construction, which we call $\LRW$:\footnote{The other construction is less relevant because of two reasons: (i) it requires an additional key, and (ii) it needs a universal hash function with a $1024$-bit range (or smaller, in which case the security of the construction degrades).}
+%
+\begin{center}
+\vspace{-1.5em}
+\resizebox{1\linewidth}{!}{%
+    \begin{minipage}{\linewidth}
+    \begin{align*}
+        \LRW[\fish]: \bin{1024}\times\bin{1024}\times\bin{128}\times\bin{1024}&\to\bin{1024}\,,\\
+            (k,t,t',m)&\mapsto \fish(k,t',\fish(k,t',m)\xor t)\,.
+    \end{align*}
+    \end{minipage}
+}
+\end{center}
+%
+These constructions can be used realize $\tweety^{\LRW[\fish]}$ as illustrated in \figref{fig:LRW} and described as follows:
+
+% ----------------------------------------------------------------
+\begin{figure}[t]
+    \centering
+    \begin{tikzpicture}
+        [%
+            auto,thick,%
+            block/.style={draw,thick,rectangle,minimum height=5em,minimum width=5em},
+            xor/.style={draw,circle,append after command={[shorten >=\pgflinewidth, shorten <=\pgflinewidth,] (\tikzlastnode.north) edge (\tikzlastnode.south)(\tikzlastnode.east) edge (\tikzlastnode.west)}},
+            line/.style={draw, -latex',shorten <=1bp,shorten >=1bp,-angle 60}
+        ]
+        % box 1
+        \node[block,anchor=center] (b1) at (0,0) {3fish};
+        % box 2
+        \node[block,anchor=center] (b2) at (4,0) {3fish};
+        % oplus sign
+        \node[xor,scale=1.2] (op) at (2,0) {};
+
+        % labels
+        \begin{scope}[node distance=2cm]
+            \node[above of=b1] (key1) {$key$};
+            \node[above of=b2] (key2) {$key$};
+            \node[left of=b1]  (message) {\msg};
+            \node[right of=b2] (cipher) {\ctxt};
+            \node[below of=b1] (tp1) {$ts$};
+            \node[below of=b2] (tp2) {$ts$};
+        \end{scope}
+        \node[above of=op,node distance=2cm] (t) {$ht$};
+        \path[line] (b1) edge (op)
+                    (op) edge (b2)
+                    (message) edge (b1)
+                    (b2) edge (cipher)
+                    (key1) edge (b1)
+                    (key2) edge (b2)
+                    (tp1) edge (b1)
+                    (tp2) edge (b2)
+                    (t) edge (op);
+
+    \end{tikzpicture}
+    \caption{\tweety based on $\LRW[\fish]$. Padding of data is excluded from the figure}\label{fig:LRW}
+\end{figure}
+% ----------------------------------------------------------------
+\begin{description}
+    \item[]\texttt{PTweet$^{\LRW[\fish]}(\key, \msg, \hasht, \tstamp)$}:
+    \item[]\hspace{2.5cm}$ \ctxt = \LRW[\fish](\key,\pad_{1024}(\hasht),\pad_{128}(\tstamp),\pad_{1024}(\msg))\,,$ \\
+    \item[]\texttt{PRead$^{\LRW[\fish]}(\key, \ctxt, \hasht, \tstamp)$}:
+    \item[]\hspace{2.5cm} $\msg = \unpad_{1024}(\LRW[\fish]^{-1}(\key,\pad_{1024}(\hasht),\pad_{128}(\tstamp),\ctxt))\,.$
+\end{description}
+%
+% \begin{align}
+%     \begin{split}
+%         \mathtt{PTweet}^{\LRW[\fish]}(\key, \msg, \hasht, \tstamp) &= \ctxt = \LRW[\fish](\key,\pad_{1024}(\hasht),\pad_{128}(\tstamp),\pad_{1024}(\msg))\,\\
+%         \mathtt{PRead}^{\LRW[\fish]}(\key, \ctxt, \hasht, \tstamp) &= \msg = \unpad_{1024}(\LRW[\fish]^{-1}(\key,\pad_{1024}(\hasht),\pad_{128}(\tstamp),\ctxt))\,.
+%     \end{split}\label{eqn:tweetylrw}
+% \end{align}
+%
+For this construction to work we strictly need $\tau\leq 1023$, a condition clearly satisfied as $1120\geq \nu+\tau=1024+\tau$.
+    %TODO if time stamp is 32 bits then $\LRW[\fish]$ is not at all needed.
+
+\medskip
+\desc{Security.}
+The security of $\tweety^{\LRW[\fish]}$ in fact follows from \thref{thm:tbc} and a result from \cite{LRW02}.
+
+\begin{theorem}\label{thm:lrw}
+    Let $n=1024$ be the state size of \fish. We have
+    \begin{align*}
+        \advcpa{\tweety^{\LRW[\fish]}}(Q,T) \leq \Theta(Q^2/2^n) + \advsprp{\fish}(2Q,T')\,,
+    \end{align*}
+    where $T'\approx T$.
+\end{theorem}
+\begin{proof}
+    Note that the derivation in \thref{thm:tbc} not only applies to \fish, but to any tweakable blockcipher. Applied to $\LRW[\fish]$ we get
+    \begin{align*}
+        \advcpa{\tweety^{\LRW[\fish]}}(Q,T) \leq \advsprp{\LRW[\fish]}(Q,T'')\,,
+    \end{align*}
+    where $T''\approx T$. In \cite{LRW02} it is proven that
+    \begin{align*}
+        \advsprp{\LRW[\fish]}(Q,T'') \leq \Theta(Q^2/2^n) + \advsprp{\fish}(2Q,T')\,,
+    \end{align*}
+    where $T'\approx T''$. This completes the proof.
+\qed\end{proof}
+%\begin{proof}
+ %   TODO idea. First step, sprp-switch. Then, group all queries made by $\A$ into $q_{t'}$ queries under time stamp $t'$. Every time a different $t'$ is used, a different and independent instance: $\Theta(\frac{q_{t'}^2}{2^n})$. Summing over all tweaks gives the bound.
+%\qed\end{proof}
+
+% ----------------------------------------------------------------
+\section{Tweety from Sponge}\label{sec:tweetySponge}
+
+The Sponge functions were originally introduced by Bertoni \etal~\cite{BDPA07} for cryptographic hashing, but can also be used in a broad spectrum of keyed applications, including stream encryption. They are also particularly useful for tweet encryption given the tweet size and the flexibility in the state size of the Sponge. In more detail, we suggest the following function realization, which resembles ideas of the (inner) keyed Sponge \cite{BDPA11-SKEW,ADMV15-FSE} and the duplex mode \cite{BDPA11-SAC}, transformed to the tweakable setting, as depicted in \figref{fig:Sponge}. We stress, however, that the keyed Sponges are merely stream-based encryption, and a unique time stamp is required for every encryption.
+
+% ----------------------------------------------------------------
+\begin{figure}[t]
+    \centering
+    \begin{tikzpicture}
+        [%
+            auto,thick,%
+            block/.style={draw,thick,rectangle,minimum height=5em,minimum width=5em,font=\Large},
+            xor/.style={draw,circle,append after command={[shorten >=\pgflinewidth, shorten <=\pgflinewidth,] (\tikzlastnode.north) edge (\tikzlastnode.south)(\tikzlastnode.east) edge (\tikzlastnode.west)}},
+            line/.style={draw, shorten <=1bp,shorten >=1bp,-angle 60}
+        ]
+        % box 1
+        \node[block,anchor=center] (b1) at (0,0) {$\pi$};
+        \begin{scope}[node distance=0.7cm]
+            \node (b_nw1) at (-0.7,0.5) {};
+            \node (b_sw1) at (-0.7,-0.5) {};
+            \node (b_ne1) at (0.7,0.5) {};
+            \node (b_se1) at (0.7,-0.5) {};
+        \end{scope}
+        % box 2
+        \node[block,anchor=center] (b2) at (5,0) {$\pi$};
+        \begin{scope}[node distance=0.7cm]
+            \node (b_nw2) at (4.3,0.5) {};
+            \node (b_sw2) at (4.3,-0.5){};
+            \node (b_ne2) at (5.7,0.5) {};
+            \node (b_se2) at (5.7,-0.5) {};
+        \end{scope}
+
+        % oplus sign
+        \node[xor,scale=1.2] (op1) at (2,0.5) {};
+        \node[xor,scale=1.2] (op2) at (7,0.5) {};
+        \node[right of=op1,node distance=1.2cm] (dot1) {\LARGE$\cdot$};
+        \node[right of=op2,node distance=1.2cm] (dot2) {\LARGE$\cdot$};
+        \node at (8.5,0) {$\ldots$};
+
+        % % labels
+        \begin{scope}[node distance=2cm]
+            \node[left of=b_nw1] (tsht) {$ts \parallel ht$};
+            \node[left of=b_sw1] (key1) {$key$};
+        \end{scope}
+        \begin{scope}[node distance=1.4cm]
+            \node[above of=op1]  (ms1) {$\msg_1$};
+            \node[above of=op2] (ms2) {$\msg_2$};
+            \node[above of=dot1] (ct0) {$\ctxt_1$};
+            \node[above of=dot2] (ct1) {$\ctxt_2$};
+        \end{scope}
+        \node[below of=dot1,node distance=2cm] {$\ctxt = \ctxt_1 \parallel \ctxt_2$};
+
+        \path[line] (tsht) edge (b_nw1.west)
+                    (key1) edge (b_sw1)
+                    (b_ne1) edge (op1)
+                    (b_se1) edge (b_sw2)
+                    (op1) edge (b_nw2)
+                    (b_ne2) edge (op2)
+                    (ms1) edge (op1)
+                    (ms2) edge (op2);
+        \draw[-angle 60] (dot1.center) -- (ct0);
+        \draw[-angle 60] (dot2.center) -- (ct1);
+        \draw (op2) -- (8.5,0.5);
+        \draw (b_se2) -- (8.5,-0.5);
+
+    \end{tikzpicture}
+    \caption{\tweety based on a Sponge. Padding of data is excluded from the figure}\label{fig:Sponge}
+\end{figure}
+% ----------------------------------------------------------------
+
+
+The realization $\tweety^{\pi,\ell,n}$ is indexed by a permutation $\pi$ of width $b$ and two parameters $\ell$ and $n$ which specify the way it parses its message blocks: it considers $\ell$ message blocks of size $n$. It operates on keys of size $\kappa\leq b-n$ bits, and the encryption and decryption functionalities are given in Algorithm~\ref{algo:PTweet} and \ref{algo:PRead} and described as follows:
+%
+\begin{description}
+    \item[]\texttt{PTweet$^{\pi,\ell,n}$}: $\bink\times\binm\times\bint\times\bins \to \binm\,,$ \\
+    \item[]\texttt{PRead$^{\pi,\ell,n}$}: $\bink\times\binm\times\bint\times\bins \to \binm\,.$
+\end{description}
+% \begin{align*}
+%     \mathtt{PTweet}^{\pi,\ell,n}: \bink\times\binm\times\bint\times\bins &\to \binm\,,\\
+%     \mathtt{PRead}^{\pi,\ell,n}: \bink\times\binm\times\bint\times\bins &\to \binm\,
+% \end{align*}
+We require that $\mu\leq\ell\cdot n$ and that $\sigma+\tau\leq n-1$. Note that it does not use ciphertext expansion, ergo $|\msg|=|\ctxt|$. BART I added this: We do remark, though, that ciphertext expansion can be used in a straightforward way and at no extra cost to generate an authentication tag. However, this falls beyond the scope of the paper.
+%
+\begin{center}
+\begin{minipage}{0.48\linewidth}
+    \begin{algorithm}[H]
+    \caption{$\mathtt{PTweet}^{\pi,\ell,n}$}\label{algo:PTweet}
+        \begin{algorithmic}[1]
+            \Require{$(\key,\msg,\hasht,\tstamp)$}
+            \Ensure{$\ctxt$}
+            \State{$\msg_1\parallel\cdots\parallel \msg_\ell\xleftarrow{n\text{-}\mathrm{blocks}} \msg\parallel 0^{\ell\cdot n-|\msg|}$}
+            \State{$s_0=\pad_n(\tstamp\|\hasht)\parallel 0^{b-n-|\key|}\parallel \key$}
+            \For{$i=1,\ldots,\ell$}
+                \State{$s_i = \pi(s_{i-1})$}
+                \State{$s_i = s_i \xor \big(\msg_i\parallel 0^*\big)$}
+                \State{$\ctxt_i\gets \lceil s_i\rceil_n$}
+            \EndFor
+            \State{\Return $\ctxt\gets \lceil \ctxt_1\parallel\cdots\parallel \ctxt_\ell \rceil_{|\msg|}$}
+        \end{algorithmic}
+    \end{algorithm}
+\end{minipage}
+%
+\hfill
+\begin{minipage}{0.48\linewidth}
+    \begin{algorithm}[H]
+    \caption{$\mathtt{PRead}^{\pi,\ell,n}$}\label{algo:PRead}
+        \begin{algorithmic}[1]
+            \Require{$(\key,\ctxt,\hasht,\tstamp)$}
+            \Ensure{$\msg$}
+            \State{$\ctxt_1\parallel\cdots\parallel \ctxt_\ell\xleftarrow{n\text{-}\mathrm{blocks}} \ctxt\parallel 0^{\ell\cdot n-|\ctxt|}$}
+            \State{$s_0=\pad_n(\tstamp\|\hasht)\parallel 0^{b-n-|\key|}\parallel \key$}
+            \For{$i=1,\ldots,\ell$}
+                \State{$s_i = \pi(s_{i-1})$}
+                \State{$\msg_i\gets \lceil s_i\rceil_n \xor \ctxt_i$}
+                \State{$s_i = \ctxt_i \parallel \lfloor s_i\rfloor_{b-n}$}
+            \EndFor
+            \State{\Return $\msg\gets \lceil \msg_1\parallel\cdots\parallel \msg_\ell \rceil_{|\ctxt|}$}
+        \end{algorithmic}
+    \end{algorithm}
+\end{minipage}
+\end{center}
+
+\medskip
+\desc{Security.}
+The security of $\tweety^{\pi,\ell,n}$ is closely related to that of the Inner-Keyed Sponge (\IKS) of Andreeva \etal~\cite{ADMV15-FSE}. This construction gets as input a key $k$, an arbitrarily sized message $m$, and a natural number $\rho$, and it outputs a digest $z$ of size $\rho$:
+\begin{align*}
+\IKS^\pi(k,m,\rho) = z\in\bin{\rho}\,.
+\end{align*}
+It is defined as the classical Sponge with an outer part of size $n$ and an inner part of size $b-n$, and with the capacity part being initialized using the key. We consider a specific case of \IKS where $\rho\leq n$, which means that the squeezing part of the Sponge takes exactly one round.
+
+The security of variable-input-length $\IKS:\calK\times\bin{\ast}\to\bin{n}$ based on a permutation $\pi$ is slightly different from the CPA security of \secref{sec:tweety}; it differs in two aspects: first, $\IKS$ is variable length, so it is compared with a random oracle $\RO:\bin{\ast}\to\bin{n}$, and second, it is based on an underlying idealized permutation $\pi$ and the adversary also has two-sided oracle access to $\pi$. Denote by $\perm(\bin{b})$ the set of $b$-bit permutations. Abusing notation, we refer to the security of \IKS against an adversary that has access to either $(\IKS,\pi^{\pm})$ or $(\RO,\pi^{\pm})$, where $k\getR\calK$, $\pi\getR\perm(\bin{b})$, and $\RO$ is a random oracle, by $\advcpa{\IKS}(\A)$. We define by $\advcpa{\IKS}(Q,R)$ the maximum advantage over all adversaries with total complexity $Q$, and that make at most $R$ primitive queries to $\pi^\pm$. Here, the total complexity $Q$ counts the number of \emph{fresh calls} to $\pi$ if $\A$ were conversing with $\IKS$.
+
+\begin{theorem}\label{thm:Sponge}
+    Assume $\pi\getR\perm(\bin{b})$ is an ideal permutation. We have
+    %
+    \begin{align*}
+    \advcpa{\tweety^{\pi,\ell,n}}(Q,T) \leq \frac{(\ell Q)^2}{2^{b-n}} + \frac{\ell Q R}{2^\kappa}\,,
+    \end{align*}
+    %
+    where $R$ is the maximal number of evaluations of $\pi$ that can be made in time $T$.
+\end{theorem}
+
+\begin{proof}
+    Let $\A$ be an adversary that makes $Q$ queries and runs in time $T$. It has access to either $\mathtt{PTweet}_\key$ or $\$$. Consider any evaluation $\mathtt{PTweet}_\key(\key,\ctxt,\hasht,\tstamp)$. If we define $k=0^{b-n-|\key|}\|\key$, then,
+
+    \resizebox{0.95\linewidth}{!}{%
+    \begin{minipage}{\linewidth}
+    \vspace{-0.5em}
+    \begin{align*}
+    \!\!\!\!\!\!\!\!\!\!\mathtt{PTweet}^{\pi,\ell,n}(\key,\ctxt,\hasht,\tstamp)
+        =&\;\IKS^\pi(k,\pad_n(\tstamp\|\hasht),n) \xor \msg_1 \parallel\\
+         &\;\IKS^\pi(k,\pad_n(\tstamp\|\hasht)\| \msg_1,n) \xor \msg_2 \parallel\\
+         &\;\cdots\,\\
+         &\;\IKS^\pi(k,\pad_n(\tstamp\|\hasht)\| \msg_1\cdots \msg_{\ell-2},n) \xor \msg_{\ell-1} \parallel\\
+         &\;\lceil\IKS^\pi(k,\pad_n(\tstamp\|\hasht)\| \msg_1\cdots \msg_{\ell-1},n) \xor \msg_\ell\rceil_{|\msg|\bmod n}\,,
+    \end{align*}
+    \end{minipage}
+    } % end resizebox
+
+\bigskip
+\noindent
+where, abusing notation, $|\msg|\bmod n\in\{1,\ldots,n\}$. In other words, any evaluation of $\mathtt{PTweet}_\key$ entails $\ell$ evaluations of $\IKS$. Each of these evaluations adds $1$ to the complexity (as it is simply an extension of the previous one). Thus, after $Q$ evaluations of $\mathtt{PTweet}_\key$, \IKS is evaluated with a total complexity $\ell Q$. We replace $\IKS$ by a random oracle $\RO$. This step costs us $\advcpa{\IKS}(\ell Q,R)$, where $R$ is as described in the theorem statement. Note that all evaluations of $\RO$ are made for a different input. This is clear for the $\ell$ queries for a single evaluation; different evaluations of $\mathtt{PTweet}_\key$ are made under a different $\tstamp$ as the adversary is time stamp respecting. Consequently, every query to $\mathtt{PTweet}_\key$ is responded with a uniformly randomly generated $|\msg|$-bit value, and thus,
+    \begin{align*}
+    \advcpa{\tweety^{\pi,\ell,n}}(Q,T) \leq \advcpa{\IKS}(\ell Q,R)\,.
+    \end{align*}
+    In \cite{ADMV15-FSE} it is proven that\footnote{We have slightly re-interpreted the result in order to accommodate the different key length.}
+    \begin{align*}
+    \advcpa{\IKS}(\ell Q,R) \leq \frac{(\ell Q)^2}{2^{b-n}} + \frac{\ell Q R}{2^\kappa} \,.
+    \end{align*}
+    This completes the proof.
+    \qed
+\end{proof}
+
+\medskip
+\desc{Instantiation.}
+For $\pi$, we suggest to use the Keccak permutation\linebreak $\keccak:\bin{1600}\to\bin{1600}$, and the following specific choices of $(\ell,n)$. As the complexity of the {$\tweety^{\keccak,\ell,n}$} increases linearly in $\ell$, we suggest to use $\ell\leq 2$. If $\ell=1$ and $n=1024$, the messages can be of size at most $1024$ bits, and $\tstamp\|\hasht$ is of size at most $1023$ bits. Security up to approximately $\frac{1600-n}{2}=288$ is achieved. In contrast, taking $\ell=2$ and $n=576$ gives flexible message lengths, $\tstamp\|\hasht$ should be of size at most $575$, and $512$-bit security is achieved.
+
+\section{Implementation}\label{sec:prototype}
+%
+To demonstrate the viability of our proposal, we implemented a proof-of-concept prototype Tweety-App as a Firefox extension, comprising the different Tweety approaches.
+% \footnote{Source of our implementations is freely available upon request.}
+%
+The current prototype is compatible with Firefox 14+, but it could be easily ported to other browsers extensions, e.g., to Chrome, as it is written in simple Javascript.
+Specifically, the \texttt{PTweet} and \texttt{PRead} operations are as follows:
+
+\begin{description}
+    \item[]\texttt{PTweet:} The user selects Twitter text area, and the extension launches a dialog where the user inserts the secret message and the public hashtags. The extension encrypts using the message, the hashtag, with the server time stamp, and the key as input and publishes the result into the Twitter text area.
+    \smallskip
+    \item[]\texttt{PRead:} The Firefox extension parses the messages on the Twitter-feed, and, for each message transparently decrypts and replaces the result with the secret message.
+\end{description}
+%
+In order to increase the performance, the Tweety cryptographic module interacts with Firefox through a local socket connection, allowing easy portability of the cryptographic module to other implementations, e.g., Chrome. In particular, the different instantiations of Tweety were implemented using the available C libraries for Threefish and Keccak: Skein3Fish\footnote{\url{https://github.com/wernerd/Skein3Fish}} and KeccakCodePackage\footnote{\url{https://github.com/gvanas/KeccakCodePackage}}, respectively. 
+% Therefore, the performance of Tweety-Sponge (2 permutations of Keccak-1600) takes approximately 4~$ms$, whereas Tweety-Threefish-1024 takes also about 5~$ms$. Hence 
+The performance of the three different instantiations comply with the values depicted in \tabref{tab:comparison}. Hence, Tweety-App demonstrates that the efficiency of the different Tweety approaches is much higher than other constructions, such as AES-CBC.
+
+%
+In addition, while it only supports desktop browsers at the moment, Tweety-App is perfectly suitable for resource-constrained devices, such as smartphones.
+This is crucial considering that a significant portion of users access Twitter via their mobile devices. Even the somewhat increased size of the key will not be a problem in these settings.
+
+\subsection{Encoding of messages}
+As mentioned earlier, Twitter uses UTF-8 to encode the messages. Thus, the bitlength of a 140 character message is not a constant as the representation of a UTF-8 encoded character can be anything between 1--4 bytes\footnote{See for example \url{unicode.org/faq/utf_bom.html}}. However, if only ASCII charaters are used, then UTF-8 encoding will only take one byte per character. and we get the $8\times140 = 1120$ bits that was mentioned earlier.
+
+Second problem with UTF-8 is that after encryption, when we have an arbitrary sequence of bits, it is likely that it is no longer valid UTF-8 and thus we need to do some other encoding. In our implementation we have chosen XXX FILIPE PUT THE CHOSEN SCHEME HERE XXX as the encoding of cryptotexts. Traditional schemes are base64 and base56, but these add a considerable overhead (4:3 with base64) and thus we have chosen XXX, which enables us to fit a full 140 character tweet in Tweety, with a reasonable restriction to the original alphabet YYY EXPLAIN RESTRICTION YYY.
+
+\begin{table}[tb]
+    \centering\small
+    \rowcolors{3}{lightgray}{}
+    \caption{Comparison of the different versions of \tweety, compared with AES-CBC. A size is ``flex'' if it can take any value up to the trivial upper bounds ($|\ctxt|+|\hasht|\leq1120$ bits and $|\tstamp|\leq64$ bits). The size of the key is omitted, as it is always possible to take a key of size at least the security bound}\label{tab:comparison}
+    \begin{tabular}{lcccccccccc}
+        \toprule
+        &\phantom{xxx}& \multicolumn{3}{c}{Size of} &\phantom{xxx}& \multicolumn{3}{c}{Efficiency} &\phantom{xxx}& \multirow{2}{*}{\raisebox{-2pt}{Security}}\\
+        %
+        \cmidrule{3-5}\cmidrule{7-9}
+        %
+        && $\ctxt$ &\phantom{xx}& $\hasht\|\tstamp$ && \phantom{\:}primitive\phantom{\:}           &\phantom{xx}& c/b           && \\
+        %
+        \midrule
+        %
+        AES-CBC         && flex       && flex     && $8\cdot$AES       && 16.0          && 64 \\
+        %
+        \fish          && 1024       && $<\!128$&& $1\cdot$\fish     && 6.5           && 512 \\
+        %
+        $\LRW[\fish]$  && 1024       && flex     && $2\cdot$\fish     && 13            && 512 \\
+        %
+        $\keccak,\ell,n$&&$\leq\!\ell\!\cdot\!n$&&$<\!n$&& $\ell\cdot$\keccak&& $\ell\cdot$12.5&& $\frac{1600-n}{2}$\\
+        %
+        $\phantom{\keccak,}\!\:1,1024$&&$\leq\!1024$&&$<\!1024$&& $1\cdot$\keccak&& 12.5&& $288$\\
+        %
+        $\phantom{\keccak,}\!\:1,800$&&$\leq\!800$&&$<\!800$&& $1\cdot$\keccak&& 12.5&& $400$\\
+        %
+        $\phantom{\keccak,}\!\:2,576$&& flex &&$<\!576$&& $2\cdot$\keccak&& 25&& $512$\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ----------------------------------------------------------------
+\section{Related Work}\label{sec:relatedwork}
+Along with the increased popularity of OSNs several privacy concerns start to arise which have prompted a large interest within the research community. As a result, several privacy-preserving solutions have been proposed to deliver OSN content confidentiality by means of existing cryptographic mechanisms. However, there is a lack of tailored designs that take into account the space limitation and the general design of OSNs. For instance, systems like FaceCloak~\cite{cse/LuoXH09} use blockciphers under different modes of operation such as AES-CBC to protect the content. Scramble~\cite{pet/BeatoKW11} and FSEO~\cite{codaspy/BeatoICPL13} use a broadcast encryption mechanism that encrypts the content using a blockcipher under a mode of operation. It attaches a header with the public-key encryptions of the key used by the blockcipher, representing the access control list of the content. Similarly, Persona~\cite{sigcomm/BadenBSBS09} and EaSiER~\cite{asiaccs/JahidMB11} use attribute-based encryption mechanisms to protect confidentiality while allowing access control definition by attributes.
+
+Tweetcipher~\cite{other/tweetcipher} was presented by a group of cryptographers as a compact authenticated encryption algorithm initiated through Twitter discussions. Although Tweetcipher is based on Sponge and Salsa20~\cite{estream/salsa20} constructions, it aims at delivering authentication and requires six tweets, whereas Tweety requires only one tweet with easy re-keying and public hashtags. 
+
+Moreover, other privacy-friendly architectures have been suggested to replace existing platforms. Hummingbird~\cite{sp/CristofaroSTW12} presents a variant of Twitter that provably guarantees confidentiality of tweet contents, hashtags, and follower interests. Hummingbird bases its design on private set intersection methods~\cite{asiacrypt/CristofaroKT10} to match the authorized followers to the private tweets, and uses blockcipher to protect content.
+
+%
+In general, such constructions require large entropy which may not be allowed by OSNs like Twitter. Also those constructions demand at least $8$ AES evaluations achieving only $64$-bit security. Aligned with the fact that general tweets are of a relatively short (but larger than $128$ bits) length, the dedicated constructions presented by the different Tweety approaches achieve higher efficiency results and a much higher level of security. This can be seen from \tabref{tab:comparison}. In addition, Tweety can be used together with the broadcast and attribute-based encryptions solutions as a tailored symmetric encryption, and with Hummingbird system for protecting tweets.
+
+
+
+% ----------------------------------------------------------------
+% \section{Conclusions}
+% ----------------------------------------------------------------
+\section{Discussion and Conclusions}\label{sec:concl}
+This paper presented Tweety, a customized system for selectively revealing parts of your tweets publicly, while keeping the majority of information secret. We described different options for realizing this and compared their efficiency. The constructions employ tweakable blockciphers and Sponge permutations achieving provable security that is greater than existing systems or naive constructions from normal blockciphers.
+
+Although encryption is possible with existing general blockciphers, such as AES-128, these solutions do not provide similar level of security and efficiency as Tweety when applied to the Twitter setting. This is also demonstrated in \tabref{tab:comparison}: security of the Tweety system goes up to approximately $512$ bits, while encrypting more efficiently than, for instance, AES-CBC.\footnote{The c/b's in the table are in fact derived from the speed of the Keccak permutation, AES-CBC, and $\fish$ on an Intel Core 2 for long messages \cite{Cryptopp,FLS+11,BDPA12}. These are included in the table for comparison.}
+%
+Furthermore, in order to fit more information than the common 1120 bits (i.e., 140 characters using Latin UTF-8 alphabet) into single tweets, one could employ bit packing schemes. For instance, by using larger character sets, such as emoji characters and Chinese characters, one can accommodate extra information as these characters are larger than 8 bits.
+%
+% This requires that the overhead of the encryption and other information is embedded in the 140 characters allowed by Twitter for single tweets by encoding the overhead and cryptotext in some character set larger than the original.
+%
+% In Tweety, this is not necessary, if one adheres to UTF-8 and basic Latin alphabet. To accommodate other character systems and also even emoji, one could extend Tweety with some bit packing scheme.
+
+%
+% Our application does not provide key exchange between the participants and this can be seen as a limitation of our system. We assume that this key exchange can take place in whatever means the users of the system feel is best for their intentions. It can be offline or online (based on some PKI). \tweety can then be used after the key has been agreed upon and distributed to the necessary recipients.
+
+%
+Tweety is proven secure against time stamp respecting adversaries. In the case of protection against time stamp misuse, for example by the OSN itself, the \tweety can accommodate a client generated time stamp. This would add some overhead (32 or 64 bits), but could protect against this type of attack. For the \fish constructions the security for time stamp misusing adversaries is reduced and for the \keccak construction the proof does not hold as the adversary can learn the XOR of two ciphertexts. Adding this client generated explicit time stamp would make the use of plain \fish construction harder due to the limited size of the tweak space, but the other two options would still be viable. In any case, the time stamp misusing adversary will not directly learn the plaintext or the key used in encryption even if the proof of security does not hold. In addition, there are many incentives for the platform such as Twitter to remain honest such as bad publicity.%right?
+
+%Time stamp misuse:
+%\begin{itemize}
+%    \item server never learns the content
+%    \item users can detect tamper
+%    \item server is assumed to not actively change messages because (1. doesn’t  care or not motivated to learn as fear of, for instance, “bad publicity”; 2. the message are “undetectable” according to some indistinguishability property such as social indistinguishability)
+% \end{itemize}
+
+    %\bigskip\noindent\textsc{Acknowledgments. }This work was supported in part by the Research Council KU Leuven: GOA TENSE (GOA/11/007). Bart Mennink is a Postdoctoral Fellow of the Research Foundation -- Flanders (FWO).
+
+% ----------------------------------------------------------------
+\bibliographystyle{splncs}
+\bibliography{tweetybib}
+
+
+% \clearpage
+% \appendix
+% \section{TEMP Proposed notation}
+% \begin{tabular}{|cc|cc|cc|}\hline
+% A & adversary($\A$) & a &  &  &  \\
+% B &  & b & permutationsize &  &  \\
+% C &  & c & $E$-cipher &  &  \\
+% D &  & d &  &  &  \\
+% E & blockcipher & e &  &  &  \\
+% F &  & f &  &  &  \\
+% G &  & g &  &  &  \\
+% H & uni-hash & h & uni-hash &  &  \\
+% I &  & i &  &  &  \\
+% J &  & j &  &  &  \\
+% K &  & k & $E$-key & $\kappa$ & keysize \\
+% L &  & l & \#msg-blocks &  &  \\
+% M &  & m & $E$-msg & $\mu$ & msg-size \\
+% N &  & n & msg-block-size &  &  \\
+% O &  & o &  &  &  \\
+% P &  & p &  & $\pi$ & permutation \\
+% Q & query & q &  &  &  \\
+% R &  & r &  &  &  \\
+% S &  & s & Spongestate & $\sigma$ & timestamp-size \\
+% T & time & t & $E$-tweak & $\tau$ & tweak-size \\
+% U &  & u &  &  &  \\
+% V &  & v &  &  &  \\
+% W &  & w &  &  &  \\
+% X &  & x &  &  &  \\
+% Y &  & y &  &  &  \\
+% Z &  & z &  &  &  \\ \hline
+% \end{tabular}
+
+\end{document} 

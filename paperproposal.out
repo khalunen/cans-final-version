@@ -1,0 +1,19 @@
+\BOOKMARK [0][-]{section*.1}{AITO: Compact Authenticated Encryption for Private and Secret Messaging}{}% 1
+\BOOKMARK [1][-]{section.1}{1 Introduction}{section*.1}% 2
+\BOOKMARK [2][-]{subsection.1.1}{1.1 Existing Solutions}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.2}{1.2 Contributions and Outline}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{2 Model}{section*.1}% 5
+\BOOKMARK [2][-]{subsection.2.1}{2.1 Notation}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{2.2 AITO}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{2.3 Threat Model}{section.2}% 8
+\BOOKMARK [1][-]{section.3}{3 AITO: Basic Construction}{section*.1}% 9
+\BOOKMARK [1][-]{section.4}{4 AITO: Expanded Tweak Space}{section*.1}% 10
+\BOOKMARK [1][-]{section.5}{5 AITO: Sponge Construction}{section*.1}% 11
+\BOOKMARK [1][-]{section.6}{6 Applications of AITO}{section*.1}% 12
+\BOOKMARK [2][-]{subsection.6.1}{6.1 Secret Messaging}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.2}{6.2 Secure Mix Formatting}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.3}{6.3 Microblogging}{section.6}% 15
+\BOOKMARK [1][-]{section.7}{7 Practical Analysis}{section*.1}% 16
+\BOOKMARK [2][-]{subsection.7.1}{7.1 Performance}{section.7}% 17
+\BOOKMARK [2][-]{subsection.7.2}{7.2 Implementation}{section.7}% 18
+\BOOKMARK [1][-]{section.8}{8 Discussion and Conclusions}{section*.1}% 19

@@ -1,0 +1,220 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{DBLP:conf/fse/AndersonB96a}
+Anderson, R.J., Biham, E.: Two practical and provably secure block ciphers:
+  {BEARS} and {LION}. In: {FSE} '96. LNCS, vol. 1039, pp. 113--120. Springer
+  (1996)
+
+\bibitem{ABB+15}
+Andreeva, E., Bilgin, B., Bogdanov, A., Luykx, A., Mendel, F., Mennink, B.,
+  Mouha, N., Wang, Q., Yasuda, K.: {PRIMATEs v1.02} (2015), submission to
+  CAESAR competition
+
+\bibitem{DBLP:conf/fse/AndreevaBBLMMY14}
+Andreeva, E., Bilgin, B., Bogdanov, A., Luykx, A., Mennink, B., Mouha, N.,
+  Yasuda, K.: {APE:} authenticated permutation-based encryption for lightweight
+  cryptography. In: {FSE} 2014. LNCS, vol. 8540, pp. 168--186. Springer (2015)
+
+\bibitem{asiacrypt/AndreevaBLMMY14}
+Andreeva, E., Bogdanov, A., Luykx, A., Mennink, B., Mouha, N., Yasuda, K.: How
+  to securely release unverified plaintext in authenticated encryption. In:
+  {ASIACRYPT} 2014, Part {I}. LNCS, vol. 8873, pp. 105--125. Springer (2014)
+
+\bibitem{DBLP:conf/asiacrypt/AndreevaBLMTY13}
+Andreeva, E., Bogdanov, A., Luykx, A., Mennink, B., Tischhauser, E., Yasuda,
+  K.: Parallelizable and authenticated online ciphers. In: {ASIACRYPT} 2013,
+  Part {I}. LNCS, vol. 8269, pp. 424--443. Springer (2015)
+
+\bibitem{ADMV15-FSE}
+Andreeva, E., Daemen, J., Mennink, B., {Van Assche}, G.: Security of keyed
+  {Sponge} constructions using a modular proof approach. In: {FSE} 2015. LNCS,
+  vol. 9054, pp. 364--384. Springer (2015)
+
+\bibitem{AJN15}
+Aumasson, J., Jovanovic, P., Neves, S.: {NORX v2.0} (2015), submission to
+  CAESAR competition
+
+\bibitem{BDJR97}
+Bellare, M., Desai, A., Jokipii, E., Rogaway, P.: A concrete security treatment
+  of symmetric encryption. In: {FOCS} 1997. pp. 394--403. {IEEE} Computer
+  Society (1997)
+
+\bibitem{DBLP:journals/iacr/BellareGM04}
+Bellare, M., Goldreich, O., Mityagin, A.: The power of verification queries in
+  message authentication and authenticated encryption. Cryptology ePrint
+  Archive, Report 2004/309 (2004)
+
+\bibitem{DBLP:conf/fse/BellareRW04}
+Bellare, M., Rogaway, P., Wagner, D.: The {EAX} mode of operation. In: FSE
+  2004. LNCS, vol. 3017, pp. 389--407. Springer (2004)
+
+\bibitem{BDPA11-SKEW}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: On the security of the
+  keyed {Sponge} construction. Symmetric Key Encryption Workshop (SKEW 2011)
+  (2011)
+
+\bibitem{BDPA11-SAC}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: Duplexing the {Sponge}:
+  Single-pass authenticated encryption and other applications. In: {SAC} 2011.
+  LNCS, vol. 7118, pp. 320--337. Springer (2012)
+
+\bibitem{BDPA12}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: Keccak implementation
+  overview (May 2012)
+
+\bibitem{BDPA07}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: Sponge functions
+  (ECRYPT Hash Function Workshop 2007)
+
+\bibitem{BDP+15}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G., {Van Keer}, R.: {Keyak
+  v2} (2015), submission to CAESAR competition
+
+\bibitem{esorics/BilogrevicFCU14}
+Bilogrevic, I., Freudiger, J., Cristofaro, E.D., Uzun, E.: What's the gist?
+  privacy-preserving aggregation of user profiles. In: {ESORICS} 2014. LNCS,
+  vol. 8713, pp. 128--145. Springer (2014)
+
+\bibitem{DBLP:conf/isw/BiryukovK14}
+Biryukov, A., Khovratovich, D.: {PAEQ:} parallelizable permutation-based
+  authenticated encryption. In: {ISC} 2014. LNCS, vol. 8783, pp. 72--89.
+  Springer (2014)
+
+\bibitem{wpes/BorisovGB04}
+Borisov, N., Goldberg, I., Brewer, E.A.: Off-the-record communication, or, why
+  not to use {PGP}. In: {WPES} 2004. pp. 77--84. {ACM} (2004)
+
+\bibitem{CAESAR}
+{CAESAR: Competition for Authenticated Encryption: Security, Applicability, and
+  Robustness} (March 2014)
+
+\bibitem{sp/DanezisG09}
+Danezis, G., Goldberg, I.: Sphinx: {A} compact and provably secure mix format.
+  In: {IEEE} S{} {2009}. pp. 269--282. {IEEE} Computer Society (2009)
+
+\bibitem{DBLP:conf/acisp/DattaN14}
+Datta, N., Nandi, M.: {ELmE}: A misuse resistant parallel authenticated
+  encryption. In: {ACISP} 2014. LNCS, vol. 8544, pp. 306--321. Springer (2014)
+
+\bibitem{DBLP:conf/asiacrypt/CanniereR06}
+{De Canni{\`{e}}re}, C., Rechberger, C.: Finding {SHA-1} characteristics:
+  General results and applications. In: {ASIACRYPT} 2006. LNCS, vol. 4284, pp.
+  1--20. Springer (2006)
+
+\bibitem{DEMS15}
+Dobraunig, C., Eichlseder, M., Mendel, F., {Schl\"{a}ffer}, M.: {Ascon v1.1}
+  (2015), submission to CAESAR competition
+
+\bibitem{FLS+11}
+Ferguson, N., Lucks, S., Schneier, B., Whiting, D., Bellare, M., Kohno, T.,
+  Callas, J., Walker, J.: The {Skein} hash function family (2010), submission
+  to NIST's SHA-3 competition
+
+\bibitem{DBLP:conf/fse/Fluhrer01a}
+Fluhrer, S.R.: Cryptanalysis of the {SEAL} 3.0 pseudorandom function family.
+  In: {FSE} 2001. LNCS, vol. 2355, pp. 135--143. Springer (2002)
+
+\bibitem{DBLP:conf/asiacrypt/FuhrLS15}
+Fuhr, T., Leurent, G., Suder, V.: Collision attacks against {CAESAR} candidates
+  - forgery and key-recovery against {AEZ} and marble. In: {ASIACRYPT} 2015,
+  Part {II}. LNCS, vol. 9453, pp. 510--532. Springer (2015)
+
+\bibitem{GMS15}
+Gligoroski, D., Mihajloska, H., Samardjiska, S., Jacobsen, H., {El-Hadedy}, M.,
+  Jensen, R.: {$\pi$-Cipher v2.0} (2015), submission to CAESAR competition
+
+\bibitem{gunther2012cryptographic}
+G{\"u}nther, F., Manulis, M., Strufe, T.: Cryptographic treatment of private
+  user profiles. In: Financial Cryptography and Data Security, pp. 40--54.
+  Springer (2012)
+
+\bibitem{HKR15AEZ}
+Hoang, V.T., Krovetz, T., Rogaway, P.: {AEZ v4: Authenticated Encryption by
+  Enciphering} (2015), submission to CAESAR competition
+
+\bibitem{DBLP:conf/eurocrypt/HoangKR15}
+Hoang, V., Krovetz, T., Rogaway, P.: Robust authenticated-encryption {AEZ} and
+  the problem that it solves. In: {EUROCRYPT} 2015, Part {I}. LNCS, vol. 9056,
+  pp. 15--44. Springer (2015)
+
+\bibitem{DBLP:conf/asiacrypt/JovanovicLM14}
+Jovanovic, P., Luykx, A., Mennink, B.: Beyond $2^{c/2}$ security in
+  sponge-based authenticated encryption modes. In: {ASIACRYPT} 2014, Part {I}.
+  LNCS, vol. 8873, pp. 85--104. Springer (2014)
+
+\bibitem{DBLP:conf/crypto/KarpmanPS15}
+Karpman, P., Peyrin, T., Stevens, M.: Practical free-start collision attacks on
+  76-step {SHA-1}. In: {CRYPTO} 2015, Part {I}. LNCS, vol. 9215, pp. 623--642.
+  Springer (2015)
+
+\bibitem{DBLP:conf/fse/KrovetzR11}
+Krovetz, T., Rogaway, P.: The software performance of authenticated-encryption
+  modes. In: FSE 2011. LNCS, vol. 6733, pp. 306--327. Springer (2011)
+
+\bibitem{LRW02}
+Liskov, M., Rivest, R.L., Wagner, D.: Tweakable block ciphers. In: {CRYPTO}
+  2002. LNCS, vol. 2442, pp. 31--46. Springer (2002)
+
+\bibitem{Mennink16}
+Mennink, B.: {Observation on weak keys for AEZ} (2016), {CAESAR} mailing list
+
+\bibitem{asiacrypt/MenninkRV15}
+Mennink, B., Reyhanitabar, R., Viz\'{a}r, D.: Security of full-state keyed and
+  duplex sponge: Applications to authenticated encryption. In: {ASIACRYPT}
+  2015, Part {II}. LNCS, vol. 9453, pp. 465--489. Springer (2015)
+
+\bibitem{DBLP:conf/eurocrypt/Minematsu14}
+Minematsu, K.: Parallelizable rate-1 authenticated encryption from pseudorandom
+  functions. In: {EUROCRYPT} 2014. LNCS, vol. 8441, pp. 275--292. Springer
+  (2014)
+
+\bibitem{MGH+15}
+Morawiecki, P., Gaj, K., Homsirikamol, E., Matusiewicz, K., Pieprzyk, J.,
+  Rogawski, M., Srebrny, M., {W\'{o}jcik}, M.: {ICEPOLE v2} (2015), submission
+  to CAESAR competition
+
+\bibitem{NY16}
+Naito, Y., Yasuda, K.: New bounds for keyed {Sponges} with extendable output:
+  Independence between capacity and message length. In: {FSE} 2016. LNCS,
+  Springer (2016), to appear
+
+\bibitem{crypto/GaziPT15}
+{Peter Ga\v{z}i}, Pietrzak, K., Tessaro, S.: The exact {PRF} security of
+  truncation: Tight bounds for keyed sponges and truncated {CBC}. In: {CRYPTO}
+  2015, Part {I}. LNCS, vol. 9215, pp. 368--387. Springer (2015)
+
+\bibitem{DBLP:conf/asiacrypt/Rogaway04}
+Rogaway, P.: Efficient instantiations of tweakable blockciphers and refinements
+  to modes {OCB} and {PMAC}. In: {ASIACRYPT} 2004. LNCS, vol. 3329, pp. 16--31.
+  Springer (2004)
+
+\bibitem{DBLP:conf/ccs/RogawayBBK01}
+Rogaway, P., Bellare, M., Black, J., Krovetz, T.: {OCB}: a block-cipher mode of
+  operation for efficient authenticated encryption. In: ACM Conference on
+  Computer and Communications Security. pp. 196--205. ACM (2001)
+
+\bibitem{SB15}
+Saarinen, M., Brumley, B.: {STRIBOB v2} (2015), submission to CAESAR
+  competition
+
+\bibitem{DBLP:conf/eurocrypt/Stevens13}
+Stevens, M.: New collision attacks on {SHA-1} based on optimal joint
+  local-collision analysis. In: {EUROCRYPT} 2013. LNCS, vol. 7881, pp.
+  245--261. Springer (2013)
+
+\bibitem{DBLP:journals/iacr/StevensKP15}
+Stevens, M., Karpman, P., Peyrin, T.: Freestart collision on full {SHA-1}.
+  Cryptology ePrint Archive, Report 2015/967 (2015)
+
+\bibitem{van2015vuvuzela}
+Van Den~Hooff, J., Lazar, D., Zaharia, M., Zeldovich, N.: Vuvuzela: Scalable
+  private messaging resistant to traffic analysis. In: Proceedings of the 25th
+  Symposium on Operating Systems Principles. pp. 137--152. ACM (2015)
+
+\bibitem{DBLP:conf/crypto/WangYY05a}
+Wang, X., Yin, Y., Yu, H.: Finding collisions in the full {SHA-1}. In: {CRYPTO}
+  2005. LNCS, vol. 3621, pp. 17--36. Springer (2005)
+
+\end{thebibliography}

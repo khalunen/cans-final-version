@@ -1,0 +1,144 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{DBLP:conf/fse/AndersonB96a}
+Anderson, R.J., Biham, E.: Two practical and provably secure block ciphers:
+  {BEARS} and {LION}. In: {FSE} '96. LNCS, vol. 1039, pp. 113--120. Springer
+  (1996)
+
+\bibitem{DBLP:conf/fse/AndreevaBBLMMY14}
+Andreeva, E., Bilgin, B., Bogdanov, A., Luykx, A., Mennink, B., Mouha, N.,
+  Yasuda, K.: {APE:} authenticated permutation-based encryption for lightweight
+  cryptography. In: {FSE} 2014. LNCS, vol. 8540, pp. 168--186. Springer (2015)
+
+\bibitem{asiacrypt/AndreevaBLMMY14}
+Andreeva, E., Bogdanov, A., Luykx, A., Mennink, B., Mouha, N., Yasuda, K.: How
+  to securely release unverified plaintext in authenticated encryption. In:
+  {ASIACRYPT} 2014, Part {I}. LNCS, vol. 8873, pp. 105--125. Springer (2014)
+
+\bibitem{ADMV15-FSE}
+Andreeva, E., Daemen, J., Mennink, B., {Van Assche}, G.: Security of keyed
+  {Sponge} constructions using a modular proof approach. In: {FSE} 2015. LNCS,
+  vol. 9054, pp. 364--384. Springer (2015)
+
+\bibitem{DBLP:conf/crypto/BellareCK96}
+Bellare, M., Canetti, R., Krawczyk, H.: Keying hash functions for message
+  authentication. In: {CRYPTO} '96. LNCS, vol. 1109, pp. 1--15. Springer (1996)
+
+\bibitem{BDJR97}
+Bellare, M., Desai, A., Jokipii, E., Rogaway, P.: A concrete security treatment
+  of symmetric encryption. In: {FOCS} 1997. pp. 394--403. {IEEE} Computer
+  Society (1997)
+
+\bibitem{BDPA11}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: The {Keccak} reference
+  (January 2011)
+
+\bibitem{BDPA11-SKEW}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: On the security of the
+  keyed {Sponge} construction. Symmetric Key Encryption Workshop (SKEW 2011)
+  (2011)
+
+\bibitem{BDPA11-SAC}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: Duplexing the {Sponge}:
+  Single-pass authenticated encryption and other applications. In: {SAC} 2011.
+  LNCS, vol. 7118, pp. 320--337. Springer (2012)
+
+\bibitem{BDPA07}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: Sponge functions
+  (ECRYPT Hash Function Workshop 2007)
+
+\bibitem{BDP+15}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G., {Van Keer}, R.: {Keyak
+  v2} (2015), submission to CAESAR competition
+
+\bibitem{DBLP:conf/isw/BiryukovK14}
+Biryukov, A., Khovratovich, D.: {PAEQ:} parallelizable permutation-based
+  authenticated encryption. In: {ISC} 2014. LNCS, vol. 8783, pp. 72--89.
+  Springer (2014)
+
+\bibitem{CAESAR}
+{CAESAR: Competition for Authenticated Encryption: Security, Applicability, and
+  Robustness} (March 2014)
+
+\bibitem{DBLP:conf/crypto/CogliatiLS15}
+Cogliati, B., Lampe, R., Seurin, Y.: Tweaking even-mansour ciphers. In:
+  {CRYPTO} 2015, Part {I}. LNCS, vol. 9215, pp. 189--208. Springer (2015)
+
+\bibitem{sp/DanezisG09}
+Danezis, G., Goldberg, I.: Sphinx: {A} compact and provably secure mix format.
+  In: {IEEE} S{} {2009}. pp. 269--282. {IEEE} Computer Society (2009)
+
+\bibitem{FLS+11}
+Ferguson, N., Lucks, S., Schneier, B., Whiting, D., Bellare, M., Kohno, T.,
+  Callas, J., Walker, J.: The {Skein} hash function family (2010), submission
+  to NIST's SHA-3 competition
+
+\bibitem{DBLP:conf/fse/Fluhrer01a}
+Fluhrer, S.R.: Cryptanalysis of the {SEAL} 3.0 pseudorandom function family.
+  In: {FSE} 2001. LNCS, vol. 2355, pp. 135--143. Springer (2002)
+
+\bibitem{DBLP:conf/asiacrypt/FuhrLS15}
+Fuhr, T., Leurent, G., Suder, V.: Collision attacks against {CAESAR} candidates
+  - forgery and key-recovery against {AEZ} and marble. In: {ASIACRYPT} 2015,
+  Part {II}. LNCS, vol. 9453, pp. 510--532. Springer (2015)
+
+\bibitem{HKR15AEZ}
+Hoang, V.T., Krovetz, T., Rogaway, P.: {AEZ v4: Authenticated Encryption by
+  Enciphering} (2015), submission to CAESAR competition
+
+\bibitem{DBLP:conf/eurocrypt/HoangKR15}
+Hoang, V., Krovetz, T., Rogaway, P.: Robust authenticated-encryption {AEZ} and
+  the problem that it solves. In: {EUROCRYPT} 2015, Part {I}. LNCS, vol. 9056,
+  pp. 15--44. Springer (2015)
+
+\bibitem{DBLP:conf/asiacrypt/JeanNP14}
+Jean, J., Nikolic, I., Peyrin, T.: Tweaks and keys for block ciphers: The
+  {TWEAKEY} framework. In: {ASIACRYPT} 2014, Part {II}. LNCS, vol. 8874, pp.
+  274--288. Springer (2014)
+
+\bibitem{JNP15Deoxys}
+Jean, J., {Nikoli\'c}, I., Peyrin, T.: {Deoxys v1.3} (2015), submission to
+  CAESAR competition
+
+\bibitem{JNP15Joltik}
+Jean, J., {Nikoli\'c}, I., Peyrin, T.: {Joltik v1.3} (2015), submission to
+  CAESAR competition
+
+\bibitem{DBLP:conf/asiacrypt/JovanovicLM14}
+Jovanovic, P., Luykx, A., Mennink, B.: Beyond $2^{c/2}$ security in
+  sponge-based authenticated encryption modes. In: {ASIACRYPT} 2014, Part {I}.
+  LNCS, vol. 8873, pp. 85--104. Springer (2014)
+
+\bibitem{KLL+14}
+Kavun, E., Lauridsen, M., Leander, G., Rechberger, C., Schwabe, P.,
+  {Yal\c{c}{\i}n}, T.: {Pr{\o}st v1} (2014), submission to CAESAR competition
+
+\bibitem{LRW02}
+Liskov, M., Rivest, R.L., Wagner, D.: Tweakable block ciphers. In: {CRYPTO}
+  2002. LNCS, vol. 2442, pp. 31--46. Springer (2002)
+
+\bibitem{Mennink16}
+Mennink, B.: {Observation on weak keys for AEZ} (2016), {CAESAR} mailing list
+
+\bibitem{asiacrypt/MenninkRV15}
+Mennink, B., Reyhanitabar, R., Viz\'{a}r, D.: Security of full-state keyed and
+  duplex sponge: Applications to authenticated encryption. In: {ASIACRYPT}
+  2015, Part {II}. LNCS, vol. 9453, pp. 465--489. Springer (2015)
+
+\bibitem{NY16}
+Naito, Y., Yasuda, K.: New bounds for keyed {Sponges} with extendable output:
+  Independence between capacity and message length. In: {FSE} 2016. LNCS,
+  Springer (2016), to appear
+
+\bibitem{crypto/GaziPT15}
+{Peter Ga\v{z}i}, Pietrzak, K., Tessaro, S.: The exact {PRF} security of
+  truncation: Tight bounds for keyed sponges and truncated {CBC}. In: {CRYPTO}
+  2015, Part {I}. LNCS, vol. 9215, pp. 368--387. Springer (2015)
+
+\bibitem{DBLP:conf/fse/RogawayC93}
+Rogaway, P., Coppersmith, D.: A software-optimised encryption algorithm. In:
+  FSE '93. LNCS, vol. 809, pp. 56--63. Springer (1993)
+
+\end{thebibliography}

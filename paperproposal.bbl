@@ -1,0 +1,262 @@
+\begin{thebibliography}{10}
+
+\bibitem{DBLP:conf/fse/AndersonB96a}
+{\sc Anderson, R.~J., and Biham, E.}
+\newblock Two practical and provably secure block ciphers: {BEARS} and {LION}.
+\newblock In {\em {FSE} '96\/} (1996), vol.~1039 of {\em LNCS}, Springer,
+  pp.~113--120.
+
+\bibitem{ABB+14}
+{\sc Andreeva, E., Bilgin, B., Bogdanov, A., Luykx, A., Mendel, F., Mennink,
+  B., Mouha, N., Wang, Q., and Yasuda, K.}
+\newblock {PRIMATEs v1}, 2014.
+\newblock Submission to CAESAR competition.
+
+\bibitem{asiacrypt/AndreevaBLMMY14}
+{\sc Andreeva, E., Bogdanov, A., Luykx, A., Mennink, B., Mouha, N., and Yasuda,
+  K.}
+\newblock How to securely release unverified plaintext in authenticated
+  encryption.
+\newblock In {\em {ASIACRYPT} 2014, Part {I}\/} (2014), vol.~8873 of {\em
+  LNCS}, Springer, pp.~105--125.
+
+\bibitem{DBLP:conf/asiacrypt/AndreevaBLMTY13}
+{\sc Andreeva, E., Bogdanov, A., Luykx, A., Mennink, B., Tischhauser, E., and
+  Yasuda, K.}
+\newblock Parallelizable and authenticated online ciphers.
+\newblock In {\em {ASIACRYPT} 2013, Part {I}\/} (2015), vol.~8269 of {\em
+  LNCS}, Springer, pp.~424--443.
+
+\bibitem{ADMV15-FSE}
+{\sc Andreeva, E., Daemen, J., Mennink, B., and {Van Assche}, G.}
+\newblock Security of keyed {Sponge} constructions using a modular proof
+  approach.
+\newblock In {\em {FSE} 2015\/} (2015), vol.~9054 of {\em LNCS}, Springer,
+  pp.~364--384.
+
+\bibitem{AJN14}
+{\sc Aumasson, J., Jovanovic, P., and Neves, S.}
+\newblock {NORX v1}, 2014.
+\newblock Submission to CAESAR competition.
+
+\bibitem{BDJR97}
+{\sc Bellare, M., Desai, A., Jokipii, E., and Rogaway, P.}
+\newblock A concrete security treatment of symmetric encryption.
+\newblock In {\em {FOCS} 1997\/} (1997), {IEEE} Computer Society, pp.~394--403.
+
+\bibitem{DBLP:journals/iacr/BellareGM04}
+{\sc Bellare, M., Goldreich, O., and Mityagin, A.}
+\newblock The power of verification queries in message authentication and
+  authenticated encryption.
+\newblock Cryptology ePrint Archive, Report 2004/309, 2004.
+
+\bibitem{DBLP:conf/fse/BellareRW04}
+{\sc Bellare, M., Rogaway, P., and Wagner, D.}
+\newblock The {EAX} mode of operation.
+\newblock In {\em FSE 2004\/} (2004), vol.~3017 of {\em LNCS}, Springer,
+  pp.~389--407.
+
+\bibitem{BDPA11-SKEW}
+{\sc Bertoni, G., Daemen, J., Peeters, M., and {Van Assche}, G.}
+\newblock On the security of the keyed {Sponge} construction.
+\newblock Symmetric Key Encryption Workshop (SKEW 2011), 2011.
+
+\bibitem{BDPA11-SAC}
+{\sc Bertoni, G., Daemen, J., Peeters, M., and {Van Assche}, G.}
+\newblock Duplexing the {Sponge}: Single-pass authenticated encryption and
+  other applications.
+\newblock In {\em {SAC} 2011\/} (2012), vol.~7118 of {\em LNCS}, Springer,
+  pp.~320--337.
+
+\bibitem{BDPA12}
+{\sc Bertoni, G., Daemen, J., Peeters, M., and {Van Assche}, G.}
+\newblock Keccak implementation overview, May 2012.
+\newblock \url{http://keccak.noekeon.org/Keccak-implementation-3.2.pdf}.
+
+\bibitem{BDPA07}
+{\sc Bertoni, G., Daemen, J., Peeters, M., and {Van Assche}, G.}
+\newblock Sponge functions, ECRYPT Hash Function Workshop 2007.
+\newblock \url{http://sponge.noekeon.org/SpongeFunctions.pdf}.
+
+\bibitem{BDP+14}
+{\sc Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G., and {Van Keer},
+  R.}
+\newblock {Keyak v1}, 2014.
+\newblock Submission to CAESAR competition.
+
+\bibitem{esorics/BilogrevicFCU14}
+{\sc Bilogrevic, I., Freudiger, J., Cristofaro, E.~D., and Uzun, E.}
+\newblock What's the gist? privacy-preserving aggregation of user profiles.
+\newblock In {\em {ESORICS} 2014\/} (2014), vol.~8713 of {\em LNCS}, Springer,
+  pp.~128--145.
+
+\bibitem{wpes/BorisovGB04}
+{\sc Borisov, N., Goldberg, I., and Brewer, E.~A.}
+\newblock Off-the-record communication, or, why not to use {PGP}.
+\newblock In {\em {WPES} 2004\/} (2004), {ACM}, pp.~77--84.
+
+\bibitem{CAESAR}
+{CAESAR: Competition for Authenticated Encryption: Security, Applicability, and
+  Robustness}, March 2014.
+\newblock \url{http://competitions.cr.yp.to/caesar.html}.
+
+\bibitem{asiacrypt/CristofaroKT10}
+{\sc Cristofaro, E.~D., Kim, J., and Tsudik, G.}
+\newblock Linear-complexity private set intersection protocols secure in
+  malicious model.
+\newblock In {\em {ASIACRYPT} 2010\/} (2010), vol.~6477 of {\em LNCS},
+  Springer, pp.~213--231.
+
+\bibitem{sp/CristofaroSTW12}
+{\sc Cristofaro, E.~D., Soriente, C., Tsudik, G., and Williams, A.}
+\newblock Hummingbird: Privacy at the time of {Twitter}.
+\newblock In {\em {IEEE} {SP} 2012\/} (2012), {IEEE} Computer Society,
+  pp.~285--299.
+
+\bibitem{Cryptopp}
+{Crypto++ 5.6.0 Benchmarks}, May 2015.
+\newblock \url{http://www.cryptopp.com/benchmarks.html}.
+
+\bibitem{sp/DanezisG09}
+{\sc Danezis, G., and Goldberg, I.}
+\newblock Sphinx: {A} compact and provably secure mix format.
+\newblock In {\em {IEEE} S{} {2009}\/} (2009), {IEEE} Computer Society,
+  pp.~269--282.
+
+\bibitem{DBLP:conf/acisp/DattaN14}
+{\sc Datta, N., and Nandi, M.}
+\newblock {ELmE}: A misuse resistant parallel authenticated encryption.
+\newblock In {\em {ACISP} 2014\/} (2014), vol.~8544 of {\em LNCS}, Springer,
+  pp.~306--321.
+
+\bibitem{DBLP:conf/asiacrypt/CanniereR06}
+{\sc {De Canni{\`{e}}re}, C., and Rechberger, C.}
+\newblock Finding {SHA-1} characteristics: General results and applications.
+\newblock In {\em {ASIACRYPT} 2006\/} (2006), vol.~4284 of {\em LNCS},
+  Springer, pp.~1--20.
+
+\bibitem{DEMS14}
+{\sc Dobraunig, C., Eichlseder, M., Mendel, F., and {Schl\"{a}ffer}, M.}
+\newblock {Ascon v1}, 2014.
+\newblock Submission to CAESAR competition.
+
+\bibitem{FLS+11}
+{\sc Ferguson, N., Lucks, S., Schneier, B., Whiting, D., Bellare, M., Kohno,
+  T., Callas, J., and Walker, J.}
+\newblock The {Skein} hash function family, 2010.
+\newblock Submission to NIST's SHA-3 competition.
+
+\bibitem{DBLP:conf/fse/Fluhrer01a}
+{\sc Fluhrer, S.~R.}
+\newblock Cryptanalysis of the {SEAL} 3.0 pseudorandom function family.
+\newblock In {\em {FSE} 2001\/} (2002), vol.~2355 of {\em LNCS}, Springer,
+  pp.~135--143.
+
+\bibitem{GMS14}
+{\sc Gligoroski, D., Mihajloska, H., Samardjiska, S., Jacobsen, H.,
+  {El-Hadedy}, M., and Jensen, R.}
+\newblock {$\pi$-Cipher v1}, 2014.
+\newblock Submission to CAESAR competition.
+
+\bibitem{DBLP:conf/eurocrypt/HoangKR15}
+{\sc Hoang, V., Krovetz, T., and Rogaway, P.}
+\newblock Robust authenticated-encryption {AEZ} and the problem that it solves.
+\newblock In {\em {EUROCRYPT} 2015, Part {I}\/} (2015), vol.~9056 of {\em
+  LNCS}, Springer, pp.~15--44.
+
+\bibitem{DBLP:conf/asiacrypt/JovanovicLM14}
+{\sc Jovanovic, P., Luykx, A., and Mennink, B.}
+\newblock Beyond $2^{c/2}$ security in sponge-based authenticated encryption
+  modes.
+\newblock In {\em {ASIACRYPT} 2014, Part {I}\/} (2014), vol.~8873 of {\em
+  LNCS}, Springer, pp.~85--104.
+
+\bibitem{DBLP:conf/crypto/KarpmanPS15}
+{\sc Karpman, P., Peyrin, T., and Stevens, M.}
+\newblock Practical free-start collision attacks on 76-step {SHA-1}.
+\newblock In {\em {CRYPTO} 2015, Part {I}\/} (2015), vol.~9215 of {\em LNCS},
+  Springer, pp.~623--642.
+
+\bibitem{DBLP:conf/fse/KrovetzR11}
+{\sc Krovetz, T., and Rogaway, P.}
+\newblock The software performance of authenticated-encryption modes.
+\newblock In {\em FSE 2011\/} (2011), vol.~6733 of {\em LNCS}, Springer,
+  pp.~306--327.
+
+\bibitem{LRW02}
+{\sc Liskov, M., Rivest, R.~L., and Wagner, D.}
+\newblock Tweakable block ciphers.
+\newblock In {\em {CRYPTO} 2002\/} (2002), vol.~2442 of {\em LNCS}, Springer,
+  pp.~31--46.
+
+\bibitem{asiacrypt/MenninkRV15}
+{\sc Mennink, B., Reyhanitabar, R., and Viz\'{a}r, D.}
+\newblock Security of full-state keyed and duplex sponge: Applications to
+  authenticated encryption.
+\newblock In {\em {ASIACRYPT} 2015, Part {II}\/} (2015), vol.~9453 of {\em
+  LNCS}, Springer, pp.~465--489.
+
+\bibitem{DBLP:conf/eurocrypt/Minematsu14}
+{\sc Minematsu, K.}
+\newblock Parallelizable rate-1 authenticated encryption from pseudorandom
+  functions.
+\newblock In {\em {EUROCRYPT} 2014\/} (2014), vol.~8441 of {\em LNCS},
+  Springer, pp.~275--292.
+
+\bibitem{MGH+14}
+{\sc Morawiecki, P., Gaj, K., Homsirikamol, E., Matusiewicz, K., Pieprzyk, J.,
+  Rogawski, M., Srebrny, M., and {W\'{o}jcik}, M.}
+\newblock {ICEPOLE v1}, 2014.
+\newblock Submission to CAESAR competition.
+
+\bibitem{crypto/GaziPT15}
+{\sc {Peter Ga\v{z}i}, Pietrzak, K., and Tessaro, S.}
+\newblock The exact {PRF} security of truncation: Tight bounds for keyed
+  sponges and truncated {CBC}.
+\newblock In {\em {CRYPTO} 2015, Part {I}\/} (2015), vol.~9215 of {\em LNCS},
+  Springer, pp.~368--387.
+
+\bibitem{DBLP:conf/asiacrypt/Rogaway04}
+{\sc Rogaway, P.}
+\newblock Efficient instantiations of tweakable blockciphers and refinements to
+  modes {OCB} and {PMAC}.
+\newblock In {\em {ASIACRYPT} 2004\/} (2004), vol.~3329 of {\em LNCS},
+  Springer, pp.~16--31.
+
+\bibitem{DBLP:conf/ccs/RogawayBBK01}
+{\sc Rogaway, P., Bellare, M., Black, J., and Krovetz, T.}
+\newblock {OCB}: a block-cipher mode of operation for efficient authenticated
+  encryption.
+\newblock In {\em ACM Conference on Computer and Communications Security\/}
+  (2001), ACM, pp.~196--205.
+
+\bibitem{Saa14STRIBOB}
+{\sc Saarinen, M.}
+\newblock {STRIBOB r1}, 2014.
+\newblock Submission to CAESAR competition.
+
+\bibitem{DBLP:conf/eurocrypt/Stevens13}
+{\sc Stevens, M.}
+\newblock New collision attacks on {SHA-1} based on optimal joint
+  local-collision analysis.
+\newblock In {\em {EUROCRYPT} 2013\/} (2013), vol.~7881 of {\em LNCS},
+  Springer, pp.~245--261.
+
+\bibitem{DBLP:journals/iacr/StevensKP15}
+{\sc Stevens, M., Karpman, P., and Peyrin, T.}
+\newblock Freestart collision on full {SHA-1}.
+\newblock Cryptology ePrint Archive, Report 2015/967, 2015.
+
+\bibitem{van2015vuvuzela}
+{\sc Van Den~Hooff, J., Lazar, D., Zaharia, M., and Zeldovich, N.}
+\newblock Vuvuzela: Scalable private messaging resistant to traffic analysis.
+\newblock In {\em Proceedings of the 25th Symposium on Operating Systems
+  Principles\/} (2015), ACM, pp.~137--152.
+
+\bibitem{DBLP:conf/crypto/WangYY05a}
+{\sc Wang, X., Yin, Y., and Yu, H.}
+\newblock Finding collisions in the full {SHA-1}.
+\newblock In {\em {CRYPTO} 2005\/} (2005), vol.~3621 of {\em LNCS}, Springer,
+  pp.~17--36.
+
+\end{thebibliography}

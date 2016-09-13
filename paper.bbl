@@ -1,0 +1,113 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{ADMV15-FSE}
+Andreeva, E., Daemen, J., Mennink, B., {Van Assche}, G.: Security of keyed
+  {Sponge} constructions using a modular proof approach. In: {FSE} 2015. LNCS
+  (To appear), Springer (2015)
+
+\bibitem{sigcomm/BadenBSBS09}
+Baden, R., Bender, A., Spring, N., Bhattacharjee, B., Starin, D.: Persona: an
+  online social network with user-defined privacy. In: {ACM} {SIGCOMM} 2009.
+  pp. 135--146. {ACM} (2009)
+
+\bibitem{codaspy/BeatoICPL13}
+Beato, F., Ion, I., {\v C}apkun, S., Preneel, B., Langheinrich, M.: For some
+  eyes only: protecting online information sharing. In: {ACM} {CODASPY} 2013.
+  pp. 1--12. {ACM} (2013)
+
+\bibitem{pet/BeatoKW11}
+Beato, F., Kohlweiss, M., Wouters, K.: Scramble! your social network data. In:
+  {PETS} 2011. LNCS, vol. 6794, pp. 211--225. Springer (2011)
+
+\bibitem{BDJR97}
+Bellare, M., Desai, A., Jokipii, E., Rogaway, P.: A concrete security treatment
+  of symmetric encryption. In: {FOCS} 1997. pp. 394--403. {IEEE} Computer
+  Society (1997)
+
+\bibitem{estream/salsa20}
+Bernstein, D.J.: Salsa20. eSTREAM, ECRYPT Stream Cipher Project, Report  25,
+  2005 (2005)
+
+\bibitem{BDPA11-SKEW}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: On the security of the
+  keyed {Sponge} construction. Symmetric Key Encryption Workshop (SKEW 2011)
+  (2011)
+
+\bibitem{BDPA11-SAC}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: Duplexing the {Sponge}:
+  Single-pass authenticated encryption and other applications. In: {SAC} 2011.
+  LNCS, vol. 7118, pp. 320--337. Springer (2012)
+
+\bibitem{BDPA12}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: Keccak implementation
+  overview (May 2012),
+  \url{http://keccak.noekeon.org/Keccak-implementation-3.2.pdf}
+
+\bibitem{BDPA07}
+Bertoni, G., Daemen, J., Peeters, M., {Van Assche}, G.: Sponge functions
+  (ECRYPT Hash Function Workshop 2007),
+  \url{http://sponge.noekeon.org/SpongeFunctions.pdf}
+
+\bibitem{NEWS/FBBug15}
+Bosker, B.: {How Facebook Explains User Data Bug That Leaked 6 Million People's
+  Information}. In: The Huffington Post (Feb 2015),
+  \url{http://huff.to/1A4Y5NG}, Accessed: Feb. 18, 2015
+
+\bibitem{asiacrypt/CristofaroKT10}
+Cristofaro, E.D., Kim, J., Tsudik, G.: Linear-complexity private set
+  intersection protocols secure in malicious model. In: {ASIACRYPT} 2010. LNCS,
+  vol. 6477, pp. 213--231. Springer (2010)
+
+\bibitem{sp/CristofaroSTW12}
+Cristofaro, E.D., Soriente, C., Tsudik, G., Williams, A.: Hummingbird: Privacy
+  at the time of {Twitter}. In: {IEEE} {SP} 2012. pp. 285--299. {IEEE} Computer
+  Society (2012)
+
+\bibitem{Cryptopp}
+{Crypto++ 5.6.0 Benchmarks} (May 2015),
+  \url{http://www.cryptopp.com/benchmarks.html}
+
+\bibitem{FLS+11}
+Ferguson, N., Lucks, S., Schneier, B., Whiting, D., Bellare, M., Kohno, T.,
+  Callas, J., Walker, J.: The {Skein} hash function family (2010), submission
+  to NIST's SHA-3 competition
+
+\bibitem{other/tweetcipher}
+Green, M., Barreto, P.S.L.M., Aumasson, J.P., Neves, S.: {Tweetcipher!} (Jun
+  2013), \url{http://cybermashup.com/2013/06/12/tweetcipher-crypto-challenge/}.
+  Accessed: Jul 10, 2015
+
+\bibitem{asiaccs/JahidMB11}
+Jahid, S., Mittal, P., Borisov, N.: {EASiER}: encryption-based access control
+  in social networks with efficient revocation. In: {ACM} {ASIACCS} 2011. pp.
+  411--415. {ACM} (2011)
+
+\bibitem{NEWS/FBS:icloud14}
+Lewis, D.: {iCloud Data Breach: Hacking And Celebrity Photos}. In: Forbes
+  Online (Sept 2014), \url{http://onforb.es/1Cmngvl}, Accessed: Jan. 6, 2015
+
+\bibitem{LRW02}
+Liskov, M., Rivest, R.L., Wagner, D.: Tweakable block ciphers. In: {CRYPTO}
+  2002. LNCS, vol. 2442, pp. 31--46. Springer (2002)
+
+\bibitem{cse/LuoXH09}
+Luo, W., Xie, Q., Hengartner, U.: {FaceCloak}: An architecture for user privacy
+  on social networking sites. In: {IEEE} {CSE} 2009. pp. 26--33. {IEEE}
+  Computer Society (2009)
+
+\bibitem{NEWS/SLT:facebooksued4}
+Oremus, W.: {F}acebook sued for ``reading'' your private messages. In: Slate
+  (Jan 2014), \url{http://slate.me/1evQXN1}, Accessed: Oct. 27, 2014
+
+\bibitem{NEWS/WP:prism13}
+Post, W.: {NSA} slides explain the {PRISM} data-collection program. In:
+  Washington Post (Jun 2013), \url{http://wapo.st/J2gkLY}. Accessed: Dec 3,
+  2014
+
+\bibitem{HOTNEts:RiedererECKR11}
+Riederer, C., Erramilli, V., Chaintreau, A., Krishnamurthy, B., Rodriguez, P.:
+  For sale : your data, {By} : you. In: {HOTNETS} 2011. p.~13. ACM (Nov 2011)
+
+\end{thebibliography}
